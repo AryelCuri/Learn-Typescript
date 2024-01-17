@@ -17,7 +17,14 @@ const capitulo1_exercicio4 =(palavra: string): void =>{
   console.log('capitulo 1.4 Fácil: Crie uma função que receba uma string e a imprima invertida no console.')
   console.log(palavra.split('').reverse().join().replaceAll(',', ''))
 }
-
+const capitulo10_exercicio1 =(numero: number): boolean => {
+  console.log('capitulo 10.1 Fácil: Crie uma função que verifique se um número é positivo.')
+  if(numero > 0){
+    return(true)
+  }else{
+    return(false)
+  }
+}
 
 
 
@@ -27,5 +34,6 @@ const main = (): void => {
   capitulo1_exercicio2('param')
   capitulo1_exercicio3(1,10)
   capitulo1_exercicio4('palavra')
+  console.log(capitulo10_exercicio1(1))
 }
 main()
