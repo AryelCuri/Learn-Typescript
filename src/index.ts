@@ -145,6 +145,15 @@ const capitulo10_exercicio5 = (numero: number): void => {
 
 }
 
+const capitulo10_exercicio6 = (ano: number): boolean => {
+  console.log('capitulo 10.6 Moderado: Implemente uma função que verifique se um ano é bissexto')
+  if(ano % 4 === 0 || ano % 400 === 0){
+    console.log(ano)
+    return true
+  }
+  return false
+}
+
 
 const main = (): void => {
 
@@ -167,5 +176,6 @@ const main = (): void => {
   capitulo10_exercicio5(-1)
   capitulo10_exercicio5(0)
   capitulo10_exercicio5(1)
+  console.log(capitulo10_exercicio6(400))
 }
 main()
