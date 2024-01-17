@@ -75,6 +75,17 @@ const capitulo9_exercicio6 =(): void => {
 
 }
 
+const capitulo9_exercicio7 = (array: number[] =[]): void => {
+  console.log('capitulo 9.7 Moderado: Escreva um loop que inverta um array de números')
+
+  let invertido: number[] = []
+  array.forEach((valor: number) => {
+    invertido.unshift(valor)
+    
+  })
+  console.log(invertido)
+}
+
 const capitulo10_exercicio1 = (numero: number): boolean => {
   console.log('capitulo 10.1 Fácil: Crie uma função que verifique se um número é positivo.')
   if (numero > 0) {
@@ -134,6 +145,7 @@ const main = (): void => {
   capitulo9_exercicio4()
   capitulo9_exercicio5(['abc', 'dfg', 'hij'])
   capitulo9_exercicio6()
+  capitulo9_exercicio7([1, 2, 3, 4, 5])
   console.log(capitulo10_exercicio1(1))
   console.log(capitulo10_exercicio2(3))
   console.log(capitulo10_exercicio3(''))
