@@ -37,7 +37,15 @@ const capitulo10_exercicio2 =(paroun: number): boolean => {
   }  
 
 }
+const capitulo10_exercicio3 =(vazia: string): boolean => {
+  console.log('capitulo 10.3 Fácil: Escreva uma função que verifique se uma string é vazia.')
+  if(vazia === '' || vazia.length === 0 ){
+    return(true)
+  }else{
+    return(false)
+  }
 
+}
 
 
 
@@ -49,5 +57,6 @@ const main = (): void => {
   capitulo1_exercicio4('palavra')
   console.log(capitulo10_exercicio1(1))
   console.log(capitulo10_exercicio2(3))
+  console.log(capitulo10_exercicio3(''))
 }
 main()
