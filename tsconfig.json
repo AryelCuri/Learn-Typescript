@@ -1,11 +1,35 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "target": "ES2015",
+    "module": "ES2020",
+    "lib": ["esnext"],
+    "noEmit": true,
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
     "esModuleInterop": true,
-    "target": "es6",
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
     "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": true,
+    "resolveJsonModule": true,
     "sourceMap": true,
-    "outDir": "dist"
+    "outDir": "./dist",
+    "rootDir": "./src"
   },
-  "lib": ["es2015"]
+  "lib": ["es2015"],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
