@@ -153,6 +153,29 @@ const capitulo10_exercicio6 = (ano: number): boolean => {
   }
   return false
 }
+const capitulo10_exercicio7 = (idade: number): void => {
+  console.log('capitulo10.7 Moderado: Escreva uma função que aceite uma idade e retorne "Criacça", "Adolescente", "Adulto" ou "idoso"')
+  if(idade < 12 && idade > 0){
+    console.log('Criança')
+    console.log(idade)
+}if(idade >= 12 && idade < 18){
+    console.log('Adolescente')
+        console.log(idade)
+
+}if(idade> 17 && idade < 60){
+  console.log('Adulto')
+      console.log(idade)
+
+}if(idade >59){
+  console.log('Idoso')
+      console.log(idade)
+
+}if(idade <0){
+  console.log('alien')
+      console.log(idade)
+
+}
+}
 
 
 const main = (): void => {
@@ -177,5 +200,6 @@ const main = (): void => {
   capitulo10_exercicio5(0)
   capitulo10_exercicio5(1)
   console.log(capitulo10_exercicio6(400))
+  capitulo10_exercicio7(12)
 }
 main()
