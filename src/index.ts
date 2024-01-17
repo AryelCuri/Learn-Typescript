@@ -27,9 +27,16 @@ const capitulo9_exercicio1 = (): void =>{
   }
 }
 
-
-
-
+const capitulo9_exercicio2 =(): void =>{
+  console.log('capitulo 9.2 Fácil: Implemente um loop que calcule a soma dos números de 1 a 50.')
+  let i: number = 1
+  let soma: number= 0
+  while(i<=50){
+    soma = soma + i
+    console.log(soma)
+    i += 1
+  }
+}
 
 const capitulo10_exercicio1 = (numero: number): boolean => {
   console.log('capitulo 10.1 Fácil: Crie uma função que verifique se um número é positivo.')
@@ -78,8 +85,6 @@ const capitulo10_exercicio5 = (numero: number): void => {
 }
 
 
-
-
 const main = (): void => {
 
   capitulo1_exercicio1()
@@ -87,6 +92,7 @@ const main = (): void => {
   capitulo1_exercicio3(1, 10)
   capitulo1_exercicio4('palavra')
   capitulo9_exercicio1()
+  capitulo9_exercicio2()
   console.log(capitulo10_exercicio1(1))
   console.log(capitulo10_exercicio2(3))
   console.log(capitulo10_exercicio3(''))
