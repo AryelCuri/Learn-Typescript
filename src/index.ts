@@ -45,6 +45,17 @@ const capitulo9_exercicio3 = (): void =>{
       i += 2
     }
 }
+const capitulo9_exercicio4 =(): void => {
+  console.log('capitulo 9.4 Fácil: Desenvolva um loop que preencha um array com os quadrados dos números de 1 a 5')
+  const quadrados: number[] = []
+  let i: number =1
+  while(i <= 5){
+    quadrados.push(Math.pow(i,2))
+    i++
+  }
+    console.log(quadrados.join())
+}
+
 
 const capitulo10_exercicio1 = (numero: number): boolean => {
   console.log('capitulo 10.1 Fácil: Crie uma função que verifique se um número é positivo.')
@@ -102,6 +113,7 @@ const main = (): void => {
   capitulo9_exercicio1()
   capitulo9_exercicio2()
   capitulo9_exercicio3()
+  capitulo9_exercicio4()
   console.log(capitulo10_exercicio1(1))
   console.log(capitulo10_exercicio2(3))
   console.log(capitulo10_exercicio3(''))
