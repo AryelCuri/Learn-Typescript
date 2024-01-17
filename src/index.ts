@@ -188,6 +188,14 @@ const capitulo10_exercicio8 = (numero: number): void => {
   } 
 }
 
+const capitulo10_exercicio10 = (idade: number): void => {
+  console.log('capitulo 10.10 Moderado: Implemente uma função que verifique se uma pessoa pode votar com base na idade')
+    if(idade > 15){
+    console.log('pode votar')
+  }if(idade <16){
+    console.log('não pode votar')
+  }
+}  
 
 const main = (): void => {
 
@@ -195,6 +203,7 @@ const main = (): void => {
   capitulo1_exercicio2('param')
   capitulo1_exercicio3(1, 10)
   capitulo1_exercicio4('palavra')
+
   capitulo9_exercicio1()
   capitulo9_exercicio2()
   capitulo9_exercicio3()
@@ -203,6 +212,7 @@ const main = (): void => {
   capitulo9_exercicio6()
   capitulo9_exercicio7([1, 2, 3, 4, 5])
   capitulo9_exercicio10()
+
   console.log(capitulo10_exercicio1(1))
   console.log(capitulo10_exercicio2(3))
   console.log(capitulo10_exercicio3(''))
@@ -213,5 +223,6 @@ const main = (): void => {
   console.log(capitulo10_exercicio6(400))
   capitulo10_exercicio7(12)
   capitulo10_exercicio8(15)
+  capitulo10_exercicio10(16)
 }
 main()
