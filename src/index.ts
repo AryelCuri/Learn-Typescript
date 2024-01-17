@@ -56,6 +56,12 @@ const capitulo9_exercicio4 =(): void => {
     console.log(quadrados.join())
 }
 
+const capitulo9_exercicio5 =(nomedaoraarray: string[] =[]): void => {
+  console.log('capitulo 9.5 Fácil: Crie um loop que itere sobre um array de strings e imprima cada uma.')
+  nomedaoraarray.forEach((valor: string) =>{
+      console.log(valor)
+  })
+}
 
 const capitulo10_exercicio1 = (numero: number): boolean => {
   console.log('capitulo 10.1 Fácil: Crie uma função que verifique se um número é positivo.')
@@ -114,6 +120,7 @@ const main = (): void => {
   capitulo9_exercicio2()
   capitulo9_exercicio3()
   capitulo9_exercicio4()
+  capitulo9_exercicio5(['abc', 'dfg', 'hij'])
   console.log(capitulo10_exercicio1(1))
   console.log(capitulo10_exercicio2(3))
   console.log(capitulo10_exercicio3(''))
