@@ -197,6 +197,19 @@ const capitulo10_exercicio10 = (idade: number): void => {
   }
 }  
 
+const capitulo10_exercicio14 = (lado1: number, lado2: number, lado3: number): void => {
+  console.log('capitulo10.14 Difícil: Implemente uma função que classifique um triângulo com base em seus lados (equilátero,isósceles ou escaleno)')
+
+  if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 >lado3){
+      if(lado1 === lado2 && lado2 === lado3){
+        console.log('O triângulo é equilátero')
+      }if(lado1 === lado2 && lado1 !== lado3 || lado2 === lado3 && lado3 !== lado1){
+        console.log('O triângulo é isósceles')
+      }if(lado1 !== lado2 && lado2 !== lado3)
+        console.log('O triângulo é escaleno')
+  }else console.log('O triângulo não existe')
+}
+
 const main = (): void => {
 
   capitulo1_exercicio1()
@@ -224,5 +237,6 @@ const main = (): void => {
   capitulo10_exercicio7(12)
   capitulo10_exercicio8(15)
   capitulo10_exercicio10(16)
+  capitulo10_exercicio14(5, 6, 7)
 }
 main()
