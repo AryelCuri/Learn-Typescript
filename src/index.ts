@@ -26,6 +26,19 @@ const capitulo10_exercicio1 =(numero: number): boolean => {
   }
 }
 
+const capitulo10_exercicio2 =(paroun: number): boolean => {
+  console.log('capitulo 10.2 Fácil: Implemente uma função que determine se um número é par.')
+  if(paroun %2 === 0){
+    console.log(paroun)
+    return(true)
+  }else{
+    console.log(paroun)
+    return(false)
+  }  
+
+}
+
+
 
 
 const main = (): void => {
@@ -35,5 +48,6 @@ const main = (): void => {
   capitulo1_exercicio3(1,10)
   capitulo1_exercicio4('palavra')
   console.log(capitulo10_exercicio1(1))
+  console.log(capitulo10_exercicio2(3))
 }
 main()
