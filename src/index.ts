@@ -47,6 +47,22 @@ const capitulo10_exercicio3 =(vazia: string): boolean => {
 
 }
 
+const capitulo10_exercicio4 =(str1: string, str2: string): boolean => {
+  console.log('capitulo 10.4 Fácil: Desenvolva uma função que compare duas strings e retorne se são iguais.')
+  if(str1 === str2) return true
+  return false
+ 
+}
+
+const capitulo10_exercicio5 =(numero: number): void =>{
+  console.log('capitulo 10.5 Fácil: Crie uma função que determine se um número é positivo, negativo ou zero.')
+  if(numero > 0){
+    console.log('positivo')
+  } else if(numero<0) console.log('negativo')
+  else console.log('igual a 0')
+
+}
+
 
 
 const main = (): void => {
@@ -58,5 +74,9 @@ const main = (): void => {
   console.log(capitulo10_exercicio1(1))
   console.log(capitulo10_exercicio2(3))
   console.log(capitulo10_exercicio3(''))
+  console.log(capitulo10_exercicio4('asd', 'asad'))
+  capitulo10_exercicio5(-1)
+  capitulo10_exercicio5(0)
+  capitulo10_exercicio5(1)
 }
 main()
