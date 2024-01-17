@@ -175,6 +175,17 @@ const capitulo10_exercicio7 = (idade: number): void => {
       console.log(idade)
 
 }
+
+}
+const capitulo10_exercicio8 = (numero: number): void => {
+  console.log('capitulo 10.8 Moderado: Crie uma função que aceite um número e retorne "Fizz" se for divisível por 3, "Buzz" se for divisível por 5 e "FizzBuzz" se for divisível por ambos')
+  if(numero % 3 === 0 && numero % 5 !== 0){
+    console.log('Fizz')
+  }if(numero % 5 === 0 && numero % 3 !== 0){
+    console.log('Buzz')
+  }if(numero % 5 === 0 && numero % 3 === 0){
+    console.log('FizzBuzz')
+  } 
 }
 
 
@@ -201,5 +212,6 @@ const main = (): void => {
   capitulo10_exercicio5(1)
   console.log(capitulo10_exercicio6(400))
   capitulo10_exercicio7(12)
+  capitulo10_exercicio8(15)
 }
 main()
