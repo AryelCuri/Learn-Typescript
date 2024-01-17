@@ -18,7 +18,14 @@ const capitulo1_exercicio4 = (palavra: string): void => {
   console.log(palavra.split('').reverse().join().replaceAll(',', ''))
 }
 
-
+const capitulo9_exercicio1 = (): void =>{
+  console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
+  let i: number = 1
+  while(i <= 10){
+    console.log(i)
+    i = i+1
+  }
+}
 
 
 
@@ -79,6 +86,7 @@ const main = (): void => {
   capitulo1_exercicio2('param')
   capitulo1_exercicio3(1, 10)
   capitulo1_exercicio4('palavra')
+  capitulo9_exercicio1()
   console.log(capitulo10_exercicio1(1))
   console.log(capitulo10_exercicio2(3))
   console.log(capitulo10_exercicio3(''))
