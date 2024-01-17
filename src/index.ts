@@ -78,7 +78,7 @@ const capitulo9_exercicio6 =(): void => {
 const capitulo9_exercicio7 = (array: number[] =[]): void => {
   console.log('capitulo 9.7 Moderado: Escreva um loop que inverta um array de números')
 
-  let invertido: number[] = []
+  const invertido: number[] = []
   array.forEach((valor: number) => {
     invertido.unshift(valor)
     
