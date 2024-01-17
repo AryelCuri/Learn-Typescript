@@ -86,6 +86,19 @@ const capitulo9_exercicio7 = (array: number[] =[]): void => {
   console.log(invertido)
 }
 
+const capitulo9_exercicio10 = (): void => {
+  console.log('ca9.10 Moderado: Implemente um loop que preencha um array com os números quadrados perfeitos até 100')
+    const quadrados: number[] = []
+    let i: number = 1
+    while(i <= 10){
+      quadrados.push(Math.pow(i,2))
+      i++
+      
+    }
+    console.log(quadrados)
+  
+  }
+
 const capitulo10_exercicio1 = (numero: number): boolean => {
   console.log('capitulo 10.1 Fácil: Crie uma função que verifique se um número é positivo.')
   if (numero > 0) {
@@ -146,6 +159,7 @@ const main = (): void => {
   capitulo9_exercicio5(['abc', 'dfg', 'hij'])
   capitulo9_exercicio6()
   capitulo9_exercicio7([1, 2, 3, 4, 5])
+  capitulo9_exercicio10()
   console.log(capitulo10_exercicio1(1))
   console.log(capitulo10_exercicio2(3))
   console.log(capitulo10_exercicio3(''))
