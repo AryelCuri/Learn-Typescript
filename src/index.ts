@@ -37,6 +37,14 @@ const capitulo9_exercicio2 =(): void =>{
     i += 1
   }
 }
+const capitulo9_exercicio3 = (): void =>{
+  console.log('capitulo 9.3 Fácil: Escreva um loop que imprima os números pares de 2 a 20')
+    let i: number = 2
+    while(i <= 20){
+      console.log(i)
+      i += 2
+    }
+}
 
 const capitulo10_exercicio1 = (numero: number): boolean => {
   console.log('capitulo 10.1 Fácil: Crie uma função que verifique se um número é positivo.')
@@ -93,6 +101,7 @@ const main = (): void => {
   capitulo1_exercicio4('palavra')
   capitulo9_exercicio1()
   capitulo9_exercicio2()
+  capitulo9_exercicio3()
   console.log(capitulo10_exercicio1(1))
   console.log(capitulo10_exercicio2(3))
   console.log(capitulo10_exercicio3(''))
