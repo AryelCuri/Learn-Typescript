@@ -183,6 +183,16 @@ const capitulo4_exercicio4 = (numero: number[] = []): void => {
 
 }  
 
+const capitulo4_exercicio5 = (palavra: string): void => {
+    console.log('capitulo 4.5 Moderado: Desenvolva uma função que receba uma string e retorne a quantidade de vogais')
+    let vogais: number = 0
+    palavra.split('').forEach((valor: string) => {
+        if(valor === 'a' ||valor === 'e' ||valor === 'i' ||valor === 'o' ||valor === 'u' ||valor === 'A' ||valor === 'E' ||valor === 'I' ||valor === 'O' ||valor === 'U')
+        vogais = vogais + 1
+    })
+    console.log(vogais)
+}   
+
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
   let i: number = 1
@@ -402,7 +412,8 @@ const main = (): void => {
   //capitulo4_exercicio1(12, 2)
   //capitulo4_exercicio2(1)
   //capitulo4_exercicio3(5)
-  capitulo4_exercicio4([1, 7, 9, 12])
+  // capitulo4_exercicio4([1, 7, 9, 12])
+  capitulo4_exercicio5('hexagono')
 
 
   // capitulo9_exercicio1()
