@@ -289,6 +289,23 @@ enum TipoSanguineo {
 console.log(TipoSanguineo)
 }
 
+const capitulo5_exercicio6 = (): void => {
+  console.log('capitulo 5.6 Moderado: Declare um enum para os planetas do sistema solar.')
+enum Planetas {
+  Saturno = '6°',
+  Urano = '7°',
+  Netuno = '8°',
+  Mercurio ='1°',
+  Venus = '2°',
+  Marte = '4°',
+  Terra = '3°',
+  Jupter = '5°'
+ 
+}
+console.log(Planetas)
+}
+
+
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
   let i: number = 1
@@ -517,7 +534,8 @@ const main = (): void => {
   //capitulo5_exercicio2()
   //capitulo5_exercicio3()
   //capitulo5_exercicio4()
-  capitulo5_exercicio5()
+  //capitulo5_exercicio5()
+  capitulo5_exercicio6()
 
 
 
