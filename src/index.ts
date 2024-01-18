@@ -54,6 +54,8 @@ const capitulo1_exercicio8 = (palavra: string): void => {
  }else console.log(palavra, 'não é um palíndromo')
 }
 
+//-----------------------------------------------------------------------------------------------------
+
 
 const capitulo2_exercicio1 = (): void => {
   console.log('capitulo 2.1 Fácil: Declare uma variável do tipo string e atribua um valor a ela')
@@ -114,6 +116,9 @@ const capitulo2_exercicio7 = (): void => {
   console.log(texto.qntdlinhas)
 }
 
+//-----------------------------------------------------------------------------------------------------
+
+
 const capitulo3_exercicio1= (array: number[] = []): void => {
   console.log('capitulo 3.1 Fácil: Crie um array de números e imprima seus elementos')
   console.log(array)
@@ -139,6 +144,10 @@ const capitulo3_exercicio3= (array: number[] = []): void => {
   })
   console.log(maior)
 }
+
+
+//-----------------------------------------------------------------------------------------------------
+
 
 const capitulo4_exercicio1 = (a: number, b: number): void => {
   console.log('capitulo 4.1 Fácil: Crie uma função que receba dois números e retorne a soma deles')
@@ -210,6 +219,9 @@ const capitulo4_exercicio7 = (array: string[] = []): void => {
   })
   console.log(maior)
 }   
+
+//-----------------------------------------------------------------------------------------------------
+
 
 const capitulo5_exercicio1 = (): void => {
   console.log('capitulo 5.1 Fácil: Declare um enum para representar os dias da semana')
@@ -337,6 +349,18 @@ enum Tabuleiro {
   console.log(Tabuleiro.WN)
 }
 
+
+//-----------------------------------------------------------------------------------------------------
+
+const capitulo6_exercicio1 = (string1: string, string2: string): void => {
+  let resultado = string1 + string2
+  console.log(resultado)
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------
+
+
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
   let i: number = 1
@@ -417,6 +441,11 @@ const capitulo9_exercicio10 = (): void => {
     console.log(quadrados)
   
   }
+
+
+//-----------------------------------------------------------------------------------------------------
+
+
 
 const capitulo10_exercicio1 = (numero: number): boolean => {
   console.log('capitulo 10.1 Fácil: Crie uma função que verifique se um número é positivo.')
@@ -535,42 +564,55 @@ const main = (): void => {
   // capitulo1_exercicio2('param')
   // capitulo1_exercicio3(1, 10)
   // capitulo1_exercicio4('palavra')
-  //console.log(capitulo1_exercicio5(1, 100))
-  //capitulo1_exercicio6(3)
-  //capitulo1_exercicio7([12, 24, 65, 4])
-  //capitulo1_exercicio8('asa')
+  // console.log(capitulo1_exercicio5(1, 100))
+  // capitulo1_exercicio6(3)
+  // capitulo1_exercicio7([12, 24, 65, 4])
+  // capitulo1_exercicio8('asa')
 
 
-  //  capitulo2_exercicio1()
-  //  capitulo2_exercicio2()
-  //  capitulo2_exercicio3()
-  //  capitulo2_exercicio4()
-  //  capitulo2_exercicio5()
-  //  capitulo2_exercicio6(['asc'])
-  //  capitulo2_exercicio7()
+
+
+  // capitulo2_exercicio1()
+  // capitulo2_exercicio2()
+  // capitulo2_exercicio3()
+  // capitulo2_exercicio4()
+  // capitulo2_exercicio5()
+  // capitulo2_exercicio6(['asc'])
+  // capitulo2_exercicio7()
    
-  //capitulo3_exercicio1([1, 2, 3])
-  //capitulo3_exercicio2([1, 2, 3])
+
+
+
+  // capitulo3_exercicio1([1, 2, 3])
+  // capitulo3_exercicio2([1, 2, 3])
   // capitulo3_exercicio3([1, 1034, 3, 4, 5, 85])
 
-  //capitulo4_exercicio1(12, 2)
-  //capitulo4_exercicio2(1)
-  //capitulo4_exercicio3(5)
+
+
+
+  // capitulo4_exercicio1(12, 2)
+  // capitulo4_exercicio2(1)
+  // capitulo4_exercicio3(5)
   // capitulo4_exercicio4([1, 7, 9, 12])
-  //capitulo4_exercicio5('hexagono')
-  //capitulo4_exercicio6('a torre da derrota')
-  //capitulo4_exercicio7(['a', 'adfs', 'asr'])
-
-  //capitulo5_exercicio1()
-  //capitulo5_exercicio2()
-  //capitulo5_exercicio3()
-  //capitulo5_exercicio4()
-  //capitulo5_exercicio5()
-  //capitulo5_exercicio6()
-  //capitulo5_exercicio7()
-  capitulo5_exercicio8()
+  // capitulo4_exercicio5('hexagono')
+  // capitulo4_exercicio6('a torre da derrota')
+  // capitulo4_exercicio7(['a', 'adfs', 'asr'])
 
 
+
+
+  // capitulo5_exercicio1()
+  // capitulo5_exercicio2()
+  // capitulo5_exercicio3()
+  // capitulo5_exercicio4()
+  // capitulo5_exercicio5()
+  // capitulo5_exercicio6()
+  // capitulo5_exercicio7()
+  // capitulo5_exercicio8()
+
+
+
+  capitulo6_exercicio1('Hello, ', 'World!')
   // capitulo9_exercicio1()
   // capitulo9_exercicio2()
   // capitulo9_exercicio3()
@@ -579,6 +621,9 @@ const main = (): void => {
   // capitulo9_exercicio6()
   // capitulo9_exercicio7([1, 2, 3, 4, 5])
   // capitulo9_exercicio10()
+
+
+
 
   // console.log(capitulo10_exercicio1(1))
   // console.log(capitulo10_exercicio2(3))
