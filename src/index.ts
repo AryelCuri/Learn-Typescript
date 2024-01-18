@@ -33,6 +33,18 @@ const capitulo1_exercicio6 = (numero: number): void => {
 
 }
 
+const capitulo1_exercicio7 = (array: number[]=[]): void => {
+  console.log('capitulo 1.7 Moderado: Crie uma função que aceite um array de números e imprima a média deles')
+  let soma: number=0
+  let media: number = 0
+  array.forEach((valor: number) =>{
+      soma= soma + valor
+  })
+  
+  media = soma/array.length
+  console.log(media)
+}
+
 const capitulo2_exercicio1 = (): void => {
   console.log('capitulo 2.1 Fácil: Declare uma variável do tipo string e atribua um valor a ela')
 
@@ -292,6 +304,7 @@ const main = (): void => {
   // capitulo1_exercicio4('palavra')
   //console.log(capitulo1_exercicio5(1, 100))
   //capitulo1_exercicio6(3)
+  capitulo1_exercicio7([12, 24, 65, 4])
 
 
   //  capitulo2_exercicio1()
