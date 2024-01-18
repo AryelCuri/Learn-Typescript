@@ -18,14 +18,6 @@ const capitulo1_exercicio4 = (palavra: string): void => {
   console.log(palavra.split('').reverse().join().replaceAll(',', ''))
 }
 
-const capitulo9_exercicio1 = (): void =>{
-  console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
-  let i: number = 1
-  while(i <= 10){
-    console.log(i)
-    i = i+1
-  }
-}
 
 const capitulo2_exercicio1 = (): void => {
   console.log('capitulo 2.1 Fácil: Declare uma variável do tipo string e atribua um valor a ela')
@@ -84,6 +76,15 @@ const capitulo2_exercicio7 = (): void => {
   console.log(texto.titulo)
   console.log(texto.palavras)
   console.log(texto.qntdlinhas)
+}
+
+const capitulo9_exercicio1 = (): void =>{
+  console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
+  let i: number = 1
+  while(i <= 10){
+    console.log(i)
+    i = i+1
+  }
 }
 
 const capitulo9_exercicio2 =(): void =>{
@@ -274,15 +275,16 @@ const main = (): void => {
   // capitulo1_exercicio1()
   // capitulo1_exercicio2('param')
   // capitulo1_exercicio3(1, 10)
-  // capitulo1_exercicio4('palavra')
+   //capitulo1_exercicio4('palavra')
 
-   capitulo2_exercicio1()
-   capitulo2_exercicio2()
-   capitulo2_exercicio3()
-   capitulo2_exercicio4()
-   capitulo2_exercicio5()
-   capitulo2_exercicio6(['asc'])
-   capitulo2_exercicio7()
+
+  //  capitulo2_exercicio1()
+  //  capitulo2_exercicio2()
+  //  capitulo2_exercicio3()
+  //  capitulo2_exercicio4()
+  //  capitulo2_exercicio5()
+  //  capitulo2_exercicio6(['asc'])
+  //  capitulo2_exercicio7()
    
 
   // capitulo9_exercicio1()
