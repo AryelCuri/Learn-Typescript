@@ -454,6 +454,17 @@ const capitulo9_exercicio10 = (): void => {
   
   }
 
+  const capitulo9_exercicio12 = (): void => {
+    console.log('capitulo 9.12 Difícil: Implemente um loop que calcule a raiz quadrada dos números de 1 a 10')
+    let i: number =1
+    let raiz: number 
+    while(i < 11){
+        raiz = Math.sqrt(i)
+        console.log(raiz)
+        i++
+    }
+}
+
 
 //-----------------------------------------------------------------------------------------------------
 
@@ -624,9 +635,10 @@ const main = (): void => {
 
 
 
-  //capitulo6_exercicio1('Hello, ', 'World!')
-  //capitulo6_exercicio2('alegre', 'mente')
-  capitulo6_exercicio3('     asdasd     ')
+  // capitulo6_exercicio1('Hello, ', 'World!')
+  // capitulo6_exercicio2('alegre', 'mente')
+  // capitulo6_exercicio3('     asdasd     ')
+
 
 
 
@@ -638,6 +650,7 @@ const main = (): void => {
   // capitulo9_exercicio6()
   // capitulo9_exercicio7([1, 2, 3, 4, 5])
   // capitulo9_exercicio10()
+  capitulo9_exercicio12()
 
 
 
