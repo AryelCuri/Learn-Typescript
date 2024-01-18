@@ -118,6 +118,16 @@ const capitulo3_exercicio1= (array: number[] = []): void => {
   console.log(array)
 }
 
+const capitulo3_exercicio2= (array: number[] = []): void => {
+  console.log('capitulo 3.2 Fácil: Implemente uma função que some todos os elementos de um array numérico')
+  let soma: number = 0
+  array.forEach((valor: number)  => {
+      soma = soma + valor
+
+  })
+  console.log(soma)
+}
+
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
   let i: number = 1
@@ -330,7 +340,8 @@ const main = (): void => {
   //  capitulo2_exercicio6(['asc'])
   //  capitulo2_exercicio7()
    
-  capitulo3_exercicio1([1, 2, 3])
+  //capitulo3_exercicio1([1, 2, 3])
+  capitulo3_exercicio2([1, 2, 3])
 
   // capitulo9_exercicio1()
   // capitulo9_exercicio2()
