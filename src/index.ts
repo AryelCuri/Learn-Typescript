@@ -264,6 +264,20 @@ enum PontosCardeais {
 console.log(PontosCardeais)
 }   
 
+const capitulo5_exercicio4 = (): void => {
+  console.log('capitulo 5.2 Fácil: Utilize um enum para representar os meses do ano')
+  
+enum Estacoes {
+  Primavera = 'plantas crescem',
+  Outono = 'folhas caem',
+  Inverno = 'frio',
+  Verao = 'calor'
+ 
+
+}
+console.log(Estacoes)
+}   
+
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
   let i: number = 1
@@ -490,7 +504,8 @@ const main = (): void => {
 
   //capitulo5_exercicio1()
   //capitulo5_exercicio2()
-  capitulo5_exercicio3()
+  //capitulo5_exercicio3()
+  capitulo5_exercicio4()
 
 
 
