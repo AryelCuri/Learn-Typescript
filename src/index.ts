@@ -62,6 +62,11 @@ const capitulo2_exercicio5 = (): void => {
   console.log(x)
 }
 
+const capitulo2_exercicio6 = (array: string[] = []): void => {
+  console.log('capitulo 2.6 Moderado: Crie um array de strings e atribua valores a ele')
+  console.log(array)
+}
+
 const capitulo9_exercicio2 =(): void =>{
   console.log('capitulo 9.2 Fácil: Implemente um loop que calcule a soma dos números de 1 a 50.')
   let i: number = 1
@@ -257,6 +262,7 @@ const main = (): void => {
    capitulo2_exercicio3()
    capitulo2_exercicio4()
    capitulo2_exercicio5()
+   capitulo2_exercicio6(['asc'])
    
 
   // capitulo9_exercicio1()
