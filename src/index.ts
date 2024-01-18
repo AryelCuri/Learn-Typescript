@@ -54,6 +54,8 @@ const capitulo1_exercicio8 = (palavra: string): void => {
  }else console.log(palavra, 'não é um palíndromo')
 }
 
+
+
 const capitulo2_exercicio1 = (): void => {
   console.log('capitulo 2.1 Fácil: Declare uma variável do tipo string e atribua um valor a ela')
 
@@ -165,6 +167,21 @@ const capitulo4_exercicio3 = (numero: number): void => {
   }
   console.log(fatorial)
 }
+
+const capitulo4_exercicio4 = (numero: number[] = []): void => {
+  console.log('capitulo 4.4 Fácil: Crie uma função que receba um array de números e retorne a média')
+  let media: number
+  let soma: number = 0
+  numero.forEach((valor: number) => {
+      soma = soma + valor
+
+  })
+  media = soma/numero.length
+  
+  console.log(media)
+
+
+}  
 
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
@@ -384,7 +401,8 @@ const main = (): void => {
 
   //capitulo4_exercicio1(12, 2)
   //capitulo4_exercicio2(1)
-  capitulo4_exercicio3(5)
+  //capitulo4_exercicio3(5)
+  capitulo4_exercicio4([1, 7, 9, 12])
 
 
   // capitulo9_exercicio1()
