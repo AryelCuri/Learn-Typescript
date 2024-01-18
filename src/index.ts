@@ -364,6 +364,10 @@ const capitulo6_exercicio2 = (palavra: string, sufixo: string): void => {
   let resultado = palavra + sufixo
   console.log(resultado)
 }
+const capitulo6_exercicio3 = (frase: string): void => {
+  console.log('capitulo 6.3 Fácil: Escreva uma função que remova espaços em branco no início e no final de uma string')
+  console.log(frase.trim())
+  }
 
 
 //-----------------------------------------------------------------------------------------------------------------
@@ -621,7 +625,8 @@ const main = (): void => {
 
 
   //capitulo6_exercicio1('Hello, ', 'World!')
-  capitulo6_exercicio2('alegre', 'mente')
+  //capitulo6_exercicio2('alegre', 'mente')
+  capitulo6_exercicio3('     asdasd     ')
 
 
 
