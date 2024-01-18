@@ -247,7 +247,7 @@ enum MesesDoAno {
 } 
 
 const capitulo5_exercicio3 = (): void => {
-  console.log('capitulo 5.2 Fácil: Utilize um enum para representar os meses do ano')
+  console.log('capitulo 5.3 Fácil: Crie um enum para os pontos cardeais (norte, sul, leste, oeste)')
   
 enum PontosCardeais {
   Norte = 'Norte',
@@ -265,7 +265,7 @@ console.log(PontosCardeais)
 }   
 
 const capitulo5_exercicio4 = (): void => {
-  console.log('capitulo 5.2 Fácil: Utilize um enum para representar os meses do ano')
+  console.log('capitulo 5.4 Fácil: Defina um enum para representar as estações do ano')
   
 enum Estacoes {
   Primavera = 'plantas crescem',
@@ -277,6 +277,17 @@ enum Estacoes {
 }
 console.log(Estacoes)
 }   
+
+const capitulo5_exercicio5 = (): void => {
+  console.log('capitulo 5.5 Moderado: Utilize um enum para representar os tipos sanguíneos (A, B, AB, O)')
+enum TipoSanguineo {
+  A = 'A',
+  B = 'B',
+  AB = 'AB',
+  O = 'O'
+}
+console.log(TipoSanguineo)
+}
 
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
@@ -505,8 +516,8 @@ const main = (): void => {
   //capitulo5_exercicio1()
   //capitulo5_exercicio2()
   //capitulo5_exercicio3()
-  capitulo5_exercicio4()
-
+  //capitulo5_exercicio4()
+  capitulo5_exercicio5()
 
 
 
