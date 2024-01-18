@@ -55,7 +55,6 @@ const capitulo1_exercicio8 = (palavra: string): void => {
 }
 
 
-
 const capitulo2_exercicio1 = (): void => {
   console.log('capitulo 2.1 Fácil: Declare uma variável do tipo string e atribua um valor a ela')
 
@@ -191,6 +190,14 @@ const capitulo4_exercicio5 = (palavra: string): void => {
         vogais = vogais + 1
     })
     console.log(vogais)
+}   
+
+const capitulo4_exercicio6 = (palavra: string): void => {
+  console.log('capitulo 4.6 Moderado: Implemente uma função que verifique se uma palavra é um palíndromo.')
+  if(palavra.replace(/\s/g, '').split('').reverse().join('') === palavra.replace(/\s/g, '')){
+      console.log('palíndromo')
+  }else console.log('não é palíndromo')
+
 }   
 
 const capitulo9_exercicio1 = (): void =>{
@@ -394,7 +401,7 @@ const main = (): void => {
   //console.log(capitulo1_exercicio5(1, 100))
   //capitulo1_exercicio6(3)
   //capitulo1_exercicio7([12, 24, 65, 4])
-  //capitulo1_exercicio8('asa')
+  capitulo1_exercicio8('asa')
 
 
   //  capitulo2_exercicio1()
@@ -413,7 +420,8 @@ const main = (): void => {
   //capitulo4_exercicio2(1)
   //capitulo4_exercicio3(5)
   // capitulo4_exercicio4([1, 7, 9, 12])
-  capitulo4_exercicio5('hexagono')
+  //capitulo4_exercicio5('hexagono')
+  capitulo4_exercicio6('a torre da derrota')
 
 
   // capitulo9_exercicio1()
