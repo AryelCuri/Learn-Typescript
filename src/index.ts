@@ -128,6 +128,17 @@ const capitulo3_exercicio2= (array: number[] = []): void => {
   console.log(soma)
 }
 
+const capitulo3_exercicio3= (array: number[] = []): void => {
+  console.log('capitulo 3.3 Fácil: Escreva uma função que encontre o maior número em um array')
+  let maior: number = 0
+  array.forEach((valor: number) => {
+      if(valor > maior){
+          maior = valor
+      }
+  })
+  console.log(maior)
+}
+
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
   let i: number = 1
@@ -341,7 +352,8 @@ const main = (): void => {
   //  capitulo2_exercicio7()
    
   //capitulo3_exercicio1([1, 2, 3])
-  capitulo3_exercicio2([1, 2, 3])
+  //capitulo3_exercicio2([1, 2, 3])
+  capitulo3_exercicio3([1, 1034, 3, 4, 5, 85])
 
   // capitulo9_exercicio1()
   // capitulo9_exercicio2()
