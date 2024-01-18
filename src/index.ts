@@ -18,6 +18,10 @@ const capitulo1_exercicio4 = (palavra: string): void => {
   console.log(palavra.split('').reverse().join().replaceAll(',', ''))
 }
 
+const capitulo1_exercicio5 = (min: number, max: number): number => {
+  console.log('capitulo 1.5 Moderado: Escreva uma função que gere um número aleatório entre 1 e 100 e o imprima')
+  return Math.floor(Math.random() * (max-min + 1) + min) 
+}
 
 const capitulo2_exercicio1 = (): void => {
   console.log('capitulo 2.1 Fácil: Declare uma variável do tipo string e atribua um valor a ela')
@@ -275,7 +279,8 @@ const main = (): void => {
   // capitulo1_exercicio1()
   // capitulo1_exercicio2('param')
   // capitulo1_exercicio3(1, 10)
-   //capitulo1_exercicio4('palavra')
+  // capitulo1_exercicio4('palavra')
+  //console.log(capitulo1_exercicio5(1, 100))
 
 
   //  capitulo2_exercicio1()
