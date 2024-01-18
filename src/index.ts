@@ -317,6 +317,26 @@ enum TipoMoeda {
   console.log(TipoMoeda.DOLAR)
 }
 
+const capitulo5_exercicio8 = (): void => {
+  console.log('capitulo 5.8 Difícil: Desenvolva um enum para as peças de xadrez')
+enum Tabuleiro {
+  WK = 'White King',
+  WR = 'White Rook',
+  WQ = 'White Queen',
+  WB = 'White Bishop',
+  WN ='White Knight',
+  WP = 'White Pawn',
+  BK = 'Black King',
+  BR = 'Black Rook',
+  BQ = 'Black Queen',
+  BB = 'Black Bishop',
+  BN = 'Black Knight',
+  BP = 'Black Pawn'
+}
+  console.log(Tabuleiro)
+  console.log(Tabuleiro.WN)
+}
+
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
   let i: number = 1
@@ -547,8 +567,8 @@ const main = (): void => {
   //capitulo5_exercicio4()
   //capitulo5_exercicio5()
   //capitulo5_exercicio6()
-  capitulo5_exercicio7()
-
+  //capitulo5_exercicio7()
+  capitulo5_exercicio8()
 
 
   // capitulo9_exercicio1()
