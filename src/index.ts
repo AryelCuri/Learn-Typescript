@@ -155,6 +155,16 @@ const capitulo4_exercicio2 = (numero: number): void => {
   }
 }
 
+const capitulo4_exercicio3 = (numero: number): void => {
+  console.log('capitulo  4.3 Fácil: Escreva uma função que calcule o fatorial de um número')
+  let i: number = numero - 1
+  let fatorial: number = numero
+  while(i > 1){
+      fatorial = fatorial * i
+      i-- 
+  }
+  console.log(fatorial)
+}
 
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
@@ -373,7 +383,8 @@ const main = (): void => {
   // capitulo3_exercicio3([1, 1034, 3, 4, 5, 85])
 
   //capitulo4_exercicio1(12, 2)
-  capitulo4_exercicio2(1)
+  //capitulo4_exercicio2(1)
+  capitulo4_exercicio3(5)
 
 
   // capitulo9_exercicio1()
