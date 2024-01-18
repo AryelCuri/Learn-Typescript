@@ -211,6 +211,20 @@ const capitulo4_exercicio7 = (array: string[] = []): void => {
   console.log(maior)
 }   
 
+const capitulo5_exercicio1 = (): void => {
+  console.log('capitulo 5.1 Fácil: Declare um enum para representar os dias da semana')
+  enum DiasDaSemana {
+  Domingo = 1,
+  Segunda,
+  Terca,
+  Quarta,
+  Quinta,
+  Sexta,
+  Sabado
+}
+console.log(DiasDaSemana)
+}   
+
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
   let i: number = 1
@@ -433,7 +447,9 @@ const main = (): void => {
   // capitulo4_exercicio4([1, 7, 9, 12])
   //capitulo4_exercicio5('hexagono')
   //capitulo4_exercicio6('a torre da derrota')
-  capitulo4_exercicio7(['a', 'adfs', 'asr'])
+  //capitulo4_exercicio7(['a', 'adfs', 'asr'])
+
+  capitulo5_exercicio1()
 
 
 
