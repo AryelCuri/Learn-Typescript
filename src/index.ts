@@ -113,6 +113,11 @@ const capitulo2_exercicio7 = (): void => {
   console.log(texto.qntdlinhas)
 }
 
+const capitulo3_exercicio1= (array: number[] = []): void => {
+  console.log('capitulo 3.1 Fácil: Crie um array de números e imprima seus elementos')
+  console.log(array)
+}
+
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
   let i: number = 1
@@ -325,6 +330,7 @@ const main = (): void => {
   //  capitulo2_exercicio6(['asc'])
   //  capitulo2_exercicio7()
    
+  capitulo3_exercicio1([1, 2, 3])
 
   // capitulo9_exercicio1()
   // capitulo9_exercicio2()
