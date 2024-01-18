@@ -41,6 +41,12 @@ const capitulo2_exercicio2 = (): void => {
   console.log(variavel)
 }
 
+const capitulo2_exercicio3 = (): void => {
+  console.log('capitulo 2.3 Fácil: Declare uma constante do tipo booleano e atribua um valor verdadeiro')
+  let verdade = true
+  console.log(verdade)
+}
+
 const capitulo9_exercicio2 =(): void =>{
   console.log('capitulo 9.2 Fácil: Implemente um loop que calcule a soma dos números de 1 a 50.')
   let i: number = 1
@@ -226,34 +232,36 @@ const capitulo10_exercicio14 = (lado1: number, lado2: number, lado3: number): vo
 
 const main = (): void => {
 
-  capitulo1_exercicio1()
-  capitulo1_exercicio2('param')
-  capitulo1_exercicio3(1, 10)
-  capitulo1_exercicio4('palavra')
+  // capitulo1_exercicio1()
+  // capitulo1_exercicio2('param')
+  // capitulo1_exercicio3(1, 10)
+  // capitulo1_exercicio4('palavra')
 
-  capitulo2_exercicio1()
-  capitulo2_exercicio2()
+   capitulo2_exercicio1()
+   capitulo2_exercicio2()
+   capitulo2_exercicio3()
+   
 
-  capitulo9_exercicio1()
-  capitulo9_exercicio2()
-  capitulo9_exercicio3()
-  capitulo9_exercicio4()
-  capitulo9_exercicio5(['abc', 'dfg', 'hij'])
-  capitulo9_exercicio6()
-  capitulo9_exercicio7([1, 2, 3, 4, 5])
-  capitulo9_exercicio10()
+  // capitulo9_exercicio1()
+  // capitulo9_exercicio2()
+  // capitulo9_exercicio3()
+  // capitulo9_exercicio4()
+  // capitulo9_exercicio5(['abc', 'dfg', 'hij'])
+  // capitulo9_exercicio6()
+  // capitulo9_exercicio7([1, 2, 3, 4, 5])
+  // capitulo9_exercicio10()
 
-  console.log(capitulo10_exercicio1(1))
-  console.log(capitulo10_exercicio2(3))
-  console.log(capitulo10_exercicio3(''))
-  console.log(capitulo10_exercicio4('asd', 'asad'))
-  capitulo10_exercicio5(-1)
-  capitulo10_exercicio5(0)
-  capitulo10_exercicio5(1)
-  console.log(capitulo10_exercicio6(400))
-  capitulo10_exercicio7(12)
-  capitulo10_exercicio8(15)
-  capitulo10_exercicio10(16)
-  capitulo10_exercicio14(5, 6, 7)
+  // console.log(capitulo10_exercicio1(1))
+  // console.log(capitulo10_exercicio2(3))
+  // console.log(capitulo10_exercicio3(''))
+  // console.log(capitulo10_exercicio4('asd', 'asad'))
+  // capitulo10_exercicio5(-1)
+  // capitulo10_exercicio5(0)
+  // capitulo10_exercicio5(1)
+  // console.log(capitulo10_exercicio6(400))
+  // capitulo10_exercicio7(12)
+  // capitulo10_exercicio8(15)
+  // capitulo10_exercicio10(16)
+  // capitulo10_exercicio14(5, 6, 7)
 }
 main()
