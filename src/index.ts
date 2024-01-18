@@ -53,6 +53,15 @@ const capitulo2_exercicio4 = (): void => {
   console.log(valor)
 }
 
+const capitulo2_exercicio5 = (): void => {
+  console.log('capitulo 2.5 Moderado: Declare uma variável com tipo union que aceite string ou número')
+  let x: number | string
+  x = 10
+  console.log(x)
+  x = 'abc'
+  console.log(x)
+}
+
 const capitulo9_exercicio2 =(): void =>{
   console.log('capitulo 9.2 Fácil: Implemente um loop que calcule a soma dos números de 1 a 50.')
   let i: number = 1
@@ -247,6 +256,7 @@ const main = (): void => {
    capitulo2_exercicio2()
    capitulo2_exercicio3()
    capitulo2_exercicio4()
+   capitulo2_exercicio5()
    
 
   // capitulo9_exercicio1()
