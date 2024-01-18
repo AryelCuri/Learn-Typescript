@@ -27,6 +27,20 @@ const capitulo9_exercicio1 = (): void =>{
   }
 }
 
+const capitulo2_exercicio1 = (): void => {
+  console.log('capitulo 2.1 Fácil: Declare uma variável do tipo string e atribua um valor a ela')
+
+  let variavel: string = 'valoraleatorio'
+  console.log(variavel)
+}
+
+const capitulo2_exercicio2 = (): void => {
+  console.log('capitulo 2.2 Fácil: Crie uma variável do tipo number e atribua um número decimal')
+
+  let variavel: number = 3.14159
+  console.log(variavel)
+}
+
 const capitulo9_exercicio2 =(): void =>{
   console.log('capitulo 9.2 Fácil: Implemente um loop que calcule a soma dos números de 1 a 50.')
   let i: number = 1
@@ -216,6 +230,9 @@ const main = (): void => {
   capitulo1_exercicio2('param')
   capitulo1_exercicio3(1, 10)
   capitulo1_exercicio4('palavra')
+
+  capitulo2_exercicio1()
+  capitulo2_exercicio2()
 
   capitulo9_exercicio1()
   capitulo9_exercicio2()
