@@ -353,7 +353,15 @@ enum Tabuleiro {
 //-----------------------------------------------------------------------------------------------------
 
 const capitulo6_exercicio1 = (string1: string, string2: string): void => {
+  console.log('capitulo 6.1 Fácil: Crie uma função que concatene duas strings')
   let resultado = string1 + string2
+  console.log(resultado)
+}
+
+const capitulo6_exercicio2 = (palavra: string, sufixo: string): void => {
+  console.log('capitulo 6.2 Fácil: Implemente uma função que adicione um sufixo a uma palavra')
+
+  let resultado = palavra + sufixo
   console.log(resultado)
 }
 
@@ -612,7 +620,11 @@ const main = (): void => {
 
 
 
-  capitulo6_exercicio1('Hello, ', 'World!')
+  //capitulo6_exercicio1('Hello, ', 'World!')
+  capitulo6_exercicio2('alegre', 'mente')
+
+
+
   // capitulo9_exercicio1()
   // capitulo9_exercicio2()
   // capitulo9_exercicio3()
