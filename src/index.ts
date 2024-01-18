@@ -23,6 +23,16 @@ const capitulo1_exercicio5 = (min: number, max: number): number => {
   return Math.floor(Math.random() * (max-min + 1) + min) 
 }
 
+const capitulo1_exercicio6 = (numero: number): void => {
+  console.log('capitulo 1.6 Moderado: Implemente uma função que verifique se um número é par ou ímpar e imprima o resultado')
+  if(numero % 2 === 0){
+
+      console.log('numero é par')
+
+  }else console.log('numero é impar')
+
+}
+
 const capitulo2_exercicio1 = (): void => {
   console.log('capitulo 2.1 Fácil: Declare uma variável do tipo string e atribua um valor a ela')
 
@@ -281,6 +291,7 @@ const main = (): void => {
   // capitulo1_exercicio3(1, 10)
   // capitulo1_exercicio4('palavra')
   //console.log(capitulo1_exercicio5(1, 100))
+  //capitulo1_exercicio6(3)
 
 
   //  capitulo2_exercicio1()
