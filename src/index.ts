@@ -198,6 +198,17 @@ const capitulo4_exercicio6 = (palavra: string): void => {
       console.log('palíndromo')
   }else console.log('não é palíndromo')
 
+}
+
+const capitulo4_exercicio7 = (array: string[] = []): void => {
+  console.log('capitulo 4.7 Moderado: Crie uma função que receba um array de strings e retorne o maior comprimento')
+  let maior: number = 0
+  array.forEach((valor: string) => {
+      if(valor.length > maior){
+          maior = valor.length
+      }
+  })
+  console.log(maior)
 }   
 
 const capitulo9_exercicio1 = (): void =>{
@@ -401,7 +412,7 @@ const main = (): void => {
   //console.log(capitulo1_exercicio5(1, 100))
   //capitulo1_exercicio6(3)
   //capitulo1_exercicio7([12, 24, 65, 4])
-  capitulo1_exercicio8('asa')
+  //capitulo1_exercicio8('asa')
 
 
   //  capitulo2_exercicio1()
@@ -421,7 +432,9 @@ const main = (): void => {
   //capitulo4_exercicio3(5)
   // capitulo4_exercicio4([1, 7, 9, 12])
   //capitulo4_exercicio5('hexagono')
-  capitulo4_exercicio6('a torre da derrota')
+  //capitulo4_exercicio6('a torre da derrota')
+  capitulo4_exercicio7(['a', 'adfs', 'asr'])
+
 
 
   // capitulo9_exercicio1()
