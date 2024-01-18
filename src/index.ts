@@ -67,6 +67,25 @@ const capitulo2_exercicio6 = (array: string[] = []): void => {
   console.log(array)
 }
 
+const capitulo2_exercicio7 = (): void => {
+  console.log('capitulo 2.7 Moderado: Defina um objeto com tipos explícitos para suas propriedades')
+  let texto: {
+      palavras: string,
+      titulo: string,
+      qntdlinhas: number
+  }
+
+  texto = {
+      palavras: 'estou aprendendo a linguagem typescript',
+      titulo: 'typescript',
+      qntdlinhas: 1
+  }
+  
+  console.log(texto.titulo)
+  console.log(texto.palavras)
+  console.log(texto.qntdlinhas)
+}
+
 const capitulo9_exercicio2 =(): void =>{
   console.log('capitulo 9.2 Fácil: Implemente um loop que calcule a soma dos números de 1 a 50.')
   let i: number = 1
@@ -263,6 +282,7 @@ const main = (): void => {
    capitulo2_exercicio4()
    capitulo2_exercicio5()
    capitulo2_exercicio6(['asc'])
+   capitulo2_exercicio7()
    
 
   // capitulo9_exercicio1()
