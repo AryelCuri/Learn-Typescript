@@ -305,6 +305,17 @@ enum Planetas {
 console.log(Planetas)
 }
 
+const capitulo5_exercicio7 = (): void => {
+  console.log('capitulo 5.7 Moderado: Crie um enum para os principais tipos de moedas')
+enum TipoMoeda {
+  DOLAR = 'Dólar = 4.94 R$',
+  EURO = 'Euro = 5.37 R$',
+  LIBRA = 'Libra = 6.27 R$',
+  IENE = 'Iene = 0.0333',
+}
+  console.log(TipoMoeda)
+  console.log(TipoMoeda.DOLAR)
+}
 
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
@@ -535,7 +546,8 @@ const main = (): void => {
   //capitulo5_exercicio3()
   //capitulo5_exercicio4()
   //capitulo5_exercicio5()
-  capitulo5_exercicio6()
+  //capitulo5_exercicio6()
+  capitulo5_exercicio7()
 
 
 
