@@ -47,6 +47,12 @@ const capitulo2_exercicio3 = (): void => {
   console.log(verdade)
 }
 
+const capitulo2_exercicio4 = (): void => {
+  console.log('capitulo 2.4 Fácil: Defina uma variável com um tipo explícito e atribua um valor')
+  let valor: number = 2
+  console.log(valor)
+}
+
 const capitulo9_exercicio2 =(): void =>{
   console.log('capitulo 9.2 Fácil: Implemente um loop que calcule a soma dos números de 1 a 50.')
   let i: number = 1
@@ -240,6 +246,7 @@ const main = (): void => {
    capitulo2_exercicio1()
    capitulo2_exercicio2()
    capitulo2_exercicio3()
+   capitulo2_exercicio4()
    
 
   // capitulo9_exercicio1()
