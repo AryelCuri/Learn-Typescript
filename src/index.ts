@@ -145,6 +145,16 @@ const capitulo4_exercicio1 = (a: number, b: number): void => {
   console.log(resposta)
 }
 
+const capitulo4_exercicio2 = (numero: number): void => {
+  if(numero > 0){
+      console.log('positivo')
+  }if(numero < 0){
+      console.log('negativo')
+  }if(numero === 0){
+      console.log('0')
+  }
+}
+
 
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
@@ -362,7 +372,8 @@ const main = (): void => {
   //capitulo3_exercicio2([1, 2, 3])
   // capitulo3_exercicio3([1, 1034, 3, 4, 5, 85])
 
-  capitulo4_exercicio1(12, 2)
+  //capitulo4_exercicio1(12, 2)
+  capitulo4_exercicio2(1)
 
 
   // capitulo9_exercicio1()
