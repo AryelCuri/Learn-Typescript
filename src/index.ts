@@ -45,6 +45,15 @@ const capitulo1_exercicio7 = (array: number[]=[]): void => {
   console.log(media)
 }
 
+const capitulo1_exercicio8 = (palavra: string): void => {
+  console.log('capitulo 1.8 Difícil: Desenvolva uma função que determine se uma palavra é um palíndromo e imprima o resultado')
+ 
+ if(palavra.split('').reverse().join('') === palavra){
+  console.log(palavra, 'é um palíndromo')
+
+ }else console.log(palavra, 'não é um palíndromo')
+}
+
 const capitulo2_exercicio1 = (): void => {
   console.log('capitulo 2.1 Fácil: Declare uma variável do tipo string e atribua um valor a ela')
 
@@ -304,7 +313,8 @@ const main = (): void => {
   // capitulo1_exercicio4('palavra')
   //console.log(capitulo1_exercicio5(1, 100))
   //capitulo1_exercicio6(3)
-  capitulo1_exercicio7([12, 24, 65, 4])
+  //capitulo1_exercicio7([12, 24, 65, 4])
+  //capitulo1_exercicio8('asa')
 
 
   //  capitulo2_exercicio1()
