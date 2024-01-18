@@ -225,6 +225,27 @@ const capitulo5_exercicio1 = (): void => {
 console.log(DiasDaSemana)
 }   
 
+const capitulo5_exercicio2 = (): void => {
+  console.log('capitulo 5.2 Fácil: Utilize um enum para representar os meses do ano')
+  
+enum MesesDoAno {
+  Jan = 1,
+  Fev,
+  Mar,
+  Abr,
+  Mai,
+  Jun,
+  Jul,
+  Ago,
+  Set,
+  Out,
+  Nov,
+  Dez
+
+}
+  console.log(MesesDoAno)
+} 
+
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
   let i: number = 1
@@ -449,7 +470,9 @@ const main = (): void => {
   //capitulo4_exercicio6('a torre da derrota')
   //capitulo4_exercicio7(['a', 'adfs', 'asr'])
 
-  capitulo5_exercicio1()
+  //capitulo5_exercicio1()
+  capitulo5_exercicio2()
+
 
 
 
