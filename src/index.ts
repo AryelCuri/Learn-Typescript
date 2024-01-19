@@ -116,6 +116,19 @@ const capitulo2_exercicio7 = (): void => {
   console.log(texto.qntdlinhas)
 }
 
+const capitulo2_exercicio8 = (): void => {
+  console.log('capitulo 2.8 Difícil: Utilize tipos condicionais para definir um tipo com base em outra variável')
+  type TetoAberto = {conversivel: true}
+  type TetoFechado = {conversivel: false}
+  const carroNovo: TetoAberto | TetoFechado = {conversivel: true}
+  console.log('carroNovo =', carroNovo)
+}
+
+const capitulo2_exercicio9 = (numero: number): number => {
+  console.log('capitulo 2.9 Difícil: Declare uma função com tipos de parâmetros e retorno explícitos')
+  return numero
+}
+
 //-----------------------------------------------------------------------------------------------------
 
 
@@ -602,8 +615,8 @@ const main = (): void => {
   // capitulo2_exercicio5()
   // capitulo2_exercicio6(['asc'])
   // capitulo2_exercicio7()
-   
-
+  //capitulo2_exercicio8()
+  //console.log(capitulo2_exercicio9(1))
 
 
   // capitulo3_exercicio1([1, 2, 3])
@@ -650,7 +663,7 @@ const main = (): void => {
   // capitulo9_exercicio6()
   // capitulo9_exercicio7([1, 2, 3, 4, 5])
   // capitulo9_exercicio10()
-  capitulo9_exercicio12()
+  //capitulo9_exercicio12()
 
 
 
