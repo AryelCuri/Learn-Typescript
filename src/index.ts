@@ -645,6 +645,16 @@ const capitulo9_exercicio10 = (): void => {
   
   }
 
+  const capitulo9_exercicio11 = (frase: string): void => {
+    console.log('Capítulo 9.11 Difícil: Desenvolva um loop que inverta cada palavra em uma frase')
+    let array: string[] = frase.split(' ')
+    let array2: string[] = []
+    array.forEach((valor: string) => {
+        array2.push(valor.split('').reverse().join(''))
+    })
+    console.log(array2.reverse().join(' '))
+  }
+
   const capitulo9_exercicio12 = (): void => {
     console.log('capitulo 9.12 Difícil: Implemente um loop que calcule a raiz quadrada dos números de 1 a 10')
     let i: number =1
@@ -655,6 +665,7 @@ const capitulo9_exercicio10 = (): void => {
         i++
     }
 }
+
 
 
 //-----------------------------------------------------------------------------------------------------
@@ -844,7 +855,7 @@ const main = (): void => {
 
   
 
-  
+
 
   //capitulo7_exercicio1()
   //capitulo7_exercicio2()
@@ -875,6 +886,7 @@ const main = (): void => {
   // capitulo9_exercicio7([1, 2, 3, 4, 5])
   // capitulo9_exercicio10()
   // capitulo9_exercicio12()
+  //capitulo9_exercicio11('asd dsa asd')
 
 
 
