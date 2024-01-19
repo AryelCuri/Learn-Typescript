@@ -168,6 +168,10 @@ const capitulo3_exercicio6 = (array: number[]): void => {
   console.log(array.filter((valor: number) => valor % 2 === 0))
 }
 
+const capitulo3_exercicio7 = (array: number[], array2: number[]): void => {
+  console.log('capitulo 3.7 Moderado: Implemente uma função que concatene dois arrays')
+  console.log(array.concat(array2))
+}
 //-----------------------------------------------------------------------------------------------------
 
 
@@ -635,6 +639,7 @@ const main = (): void => {
   // capitulo3_exercicio3([1, 1034, 3, 4, 5, 85])
   //capitulo3_exercicio5([1, 3, 4, 2, 7])
   //capitulo3_exercicio6([1, 3, 4, 2, 7])
+  capitulo3_exercicio7([1, 3, 4, 2, 7], [8, 12, 18, 24,])
 
 
 
