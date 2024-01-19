@@ -539,6 +539,28 @@ const capitulo7_exercicio6 = (): void => {
     console.log(proprietario)
 }
 
+const capitulo7_exercicio7 = (): void => {
+  console.log('Capítulo 7.7 Moderado: Defina um tipo para representar um curso, com nome, instrutor e um array de alunos');
+    type Curso = {
+        nome: string,
+        instrutor: string
+        arrayAlunos: string[]
+    }
+}
+
+type Curso = {
+  nome: string,
+  instrutor: string
+  arrayAlunos: string[]
+  notasAlunos: number[]
+}
+
+const capitulo7_exercicio8 = (curso: Curso): void => {
+console.log('Capítulo 7.7 Moderado: Defina um tipo para representar um curso, com nome, instrutor e um array de alunos');
+let notaAlta: number = Math.max(...curso.notasAlunos)
+console.log(notaAlta)
+}
+
 //-----------------------------------------------------------------------------------------------------------------
 
 
@@ -820,14 +842,25 @@ const main = (): void => {
   //capitulo6_exercicio7('Ola, mundo!')
 
 
+  
 
+  
 
   //capitulo7_exercicio1()
   //capitulo7_exercicio2()
   //capitulo7_exercicio3()
   //capitulo7_exercicio4(livros)
   //capitulo7_exercicio5()
-  capitulo7_exercicio6()
+  //capitulo7_exercicio6()
+  //capitulo7_exercicio7()
+//   capitulo7_exercicio8({
+//     nome: 'cursoBrabo',
+//     instrutor: 'jeff',
+//     arrayAlunos: ['aryel', 'jorgin', 'joaozin'],
+//     notasAlunos: [6, 8, 7.5]
+// })
+
+
 
 
 
