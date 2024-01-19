@@ -499,8 +499,45 @@ type Livro = {
      }
  ]
 
+ const capitulo7_exercicio5 = (): void => {
+  console.log('Capítulo 7.5 Moderado: Declare um tipo para representar um carro, contendo modelo, ano e um objeto de proprietario');
+    type Carro = {
+    modelo: string,
+    ano: number
+    }
+    type Proprietario = {
+        carro: Carro,
+        nomemotorista: string
+    }
+    const proprietario: Proprietario = {
+        carro: {
+            ano: 2001,
+            modelo: 'arco-íris'
+        },
+        nomemotorista: 'jeffin'
+    }
+    console.log(proprietario)
+}
 
-
+const capitulo7_exercicio6 = (): void => {
+  console.log('Capítulo 7.5 Moderado: Declare um tipo para representar um carro, contendo modelo, ano e um objeto de proprietario');
+    type Carro = {
+    modelo: string,
+    ano: number
+    }
+    type Proprietario = {
+        carro: Carro,
+        nomemotorista: string
+    }
+    const proprietario: Proprietario = {
+        carro: {
+            ano: 2001,
+            modelo: 'arco-íris'
+        },
+        nomemotorista: 'jeffin'
+    }
+    console.log(proprietario)
+}
 
 //-----------------------------------------------------------------------------------------------------------------
 
@@ -788,7 +825,9 @@ const main = (): void => {
   //capitulo7_exercicio1()
   //capitulo7_exercicio2()
   //capitulo7_exercicio3()
-  capitulo7_exercicio4(livros)
+  //capitulo7_exercicio4(livros)
+  //capitulo7_exercicio5()
+  capitulo7_exercicio6()
 
 
 
