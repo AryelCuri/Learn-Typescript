@@ -398,7 +398,12 @@ const capitulo6_exercicio2 = (palavra: string, sufixo: string): void => {
 const capitulo6_exercicio3 = (frase: string): void => {
   console.log('capitulo 6.3 Fácil: Escreva uma função que remova espaços em branco no início e no final de uma string')
   console.log(frase.trim())
-  }
+}
+
+  const capitulo6_exercicio4 = (palavra: string, letraAntiga: string, letraNova: string): void => {
+    console.log('Capítulo 6.4 Fácil: Crie uma função que substitua todas as ocorrências de uma letra por outra em uma string')
+console.log(palavra.replaceAll(letraAntiga, letraNova))
+}
 
 const capitulo6_exercicio7 =(frase: string): void => {
     console.log('capitulo 6.7 Moderado: Crie uma função que remova caracteres especiais de uma string')
@@ -680,7 +685,9 @@ const main = (): void => {
   // capitulo6_exercicio1('Hello, ', 'World!')
   // capitulo6_exercicio2('alegre', 'mente')
   // capitulo6_exercicio3('     asdasd     ')
-  capitulo6_exercicio7('Ola, mundo!')
+  //capitulo6_exercicio7('Ola, mundo!')
+  capitulo6_exercicio4('banana', 'a', 'o')
+
 
 
 
