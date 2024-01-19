@@ -666,6 +666,19 @@ const capitulo9_exercicio10 = (): void => {
     }
 }
 
+const capitulo9_exercicio14 = (): void => {
+  console.log('Capítulo 9.14 Difícil: Crie um loop que imprima os números palíndromos de 1 a 100')
+  let i1= 1
+  let i2 = 11
+    while(i1 < 10){
+        console.log(i1)
+        i1++
+    }
+    while(i2 < 100){
+        console.log(i2)
+        i2 = i2 + 11
+    }
+}
 
 
 //-----------------------------------------------------------------------------------------------------
@@ -885,8 +898,10 @@ const main = (): void => {
   // capitulo9_exercicio6()
   // capitulo9_exercicio7([1, 2, 3, 4, 5])
   // capitulo9_exercicio10()
-  // capitulo9_exercicio12()
   //capitulo9_exercicio11('asd dsa asd')
+  // capitulo9_exercicio12()
+  capitulo9_exercicio14()
+  
 
 
 
