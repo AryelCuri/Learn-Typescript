@@ -163,6 +163,10 @@ const capitulo3_exercicio5 = (array: number[]): void => {
   console.log(array.sort())
 }
 
+const capitulo3_exercicio6 = (array: number[]): void => {
+  console.log('capitulo 3.6 Moderado: Crie uma função que filtre os números pares de um array.')
+  console.log(array.filter((valor: number) => valor % 2 === 0))
+}
 
 //-----------------------------------------------------------------------------------------------------
 
@@ -624,13 +628,16 @@ const main = (): void => {
   //console.log(capitulo2_exercicio9(1))
 
 
+
+
   // capitulo3_exercicio1([1, 2, 3])
   // capitulo3_exercicio2([1, 2, 3])
   // capitulo3_exercicio3([1, 1034, 3, 4, 5, 85])
-  capitulo3_exercicio5([1, 3, 4, 2, 7])
+  //capitulo3_exercicio5([1, 3, 4, 2, 7])
+  //capitulo3_exercicio6([1, 3, 4, 2, 7])
 
 
-  
+
 
   // capitulo4_exercicio1(12, 2)
   // capitulo4_exercicio2(1)
