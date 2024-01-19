@@ -430,6 +430,29 @@ const capitulo6_exercicio7 =(frase: string): void => {
     console.log(frase.replace(/[^\w\s]/gi, ''))
 }
 
+
+
+
+//-------------------------------------------------------------------------------------------------------------------------------
+
+const capitulo7_exercicio1 = (): void => {
+  console.log('Capítulo 7.1 Fácil: Declare um tipo que represente um endereço, contendo rua, cidade e código postal')
+  type Endereco = {
+      rua: string
+      cidade: string
+      codigoPostal: number
+  }
+  const enderecoaleatorio: Endereco = {
+      rua: 'Souza Naves',
+      cidade: 'Cascavel',
+      codigoPostal: 85800-0o0
+  }
+  console.log(enderecoaleatorio)
+}
+
+
+
+
 //-----------------------------------------------------------------------------------------------------------------
 
 
@@ -707,10 +730,11 @@ const main = (): void => {
   // capitulo6_exercicio3('     asdasd     ')
   //capitulo6_exercicio4('banana', 'a', 'o')
   //capitulo6_exercicio5('Eu estou aqui')
-  capitulo6_exercicio6('eu estou aqui')
+  //capitulo6_exercicio6('eu estou aqui')
   //capitulo6_exercicio7('Ola, mundo!')
 
 
+  capitulo7_exercicio1()
 
 
 
