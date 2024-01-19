@@ -400,6 +400,10 @@ const capitulo6_exercicio3 = (frase: string): void => {
   console.log(frase.trim())
   }
 
+const capitulo6_exercicio7 =(frase: string): void => {
+    console.log('capitulo 6.7 Moderado: Crie uma função que remova caracteres especiais de uma string')
+    console.log(frase.replace(/[^\w\s]/gi, ''))
+}
 
 //-----------------------------------------------------------------------------------------------------------------
 
@@ -644,7 +648,6 @@ const main = (): void => {
   // capitulo3_exercicio2([1, 2, 3])
   // capitulo3_exercicio3([1, 1034, 3, 4, 5, 85])
   //capitulo3_exercicio4([1, 3, 4, 2, 7, 2, 4])
-
   //capitulo3_exercicio5([1, 3, 4, 2, 7])
   //capitulo3_exercicio6([1, 3, 4, 2, 7])
   //capitulo3_exercicio7([1, 3, 4, 2, 7], [8, 12, 18, 24,])
@@ -677,6 +680,7 @@ const main = (): void => {
   // capitulo6_exercicio1('Hello, ', 'World!')
   // capitulo6_exercicio2('alegre', 'mente')
   // capitulo6_exercicio3('     asdasd     ')
+  capitulo6_exercicio7('Ola, mundo!')
 
 
 
@@ -689,7 +693,7 @@ const main = (): void => {
   // capitulo9_exercicio6()
   // capitulo9_exercicio7([1, 2, 3, 4, 5])
   // capitulo9_exercicio10()
-  //capitulo9_exercicio12()
+  // capitulo9_exercicio12()
 
 
 
