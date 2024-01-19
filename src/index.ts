@@ -405,6 +405,16 @@ const capitulo6_exercicio3 = (frase: string): void => {
 console.log(palavra.replaceAll(letraAntiga, letraNova))
 }
 
+const capitulo6_exercicio5 = (frase: string): void => {
+  console.log('Capítulo 6.5 Moderado: Desenvolva uma função que inverta as palavras em uma frase')
+  let array: string[] = frase.split(' ')
+  let array2: string[] = []
+  array.forEach((valor: string) => {
+      array2.push(valor.split('').reverse().join(''))
+  })
+  console.log(array2.reverse().join(' '))
+}
+
 const capitulo6_exercicio7 =(frase: string): void => {
     console.log('capitulo 6.7 Moderado: Crie uma função que remova caracteres especiais de uma string')
     console.log(frase.replace(/[^\w\s]/gi, ''))
@@ -686,7 +696,9 @@ const main = (): void => {
   // capitulo6_exercicio2('alegre', 'mente')
   // capitulo6_exercicio3('     asdasd     ')
   //capitulo6_exercicio7('Ola, mundo!')
-  capitulo6_exercicio4('banana', 'a', 'o')
+  //capitulo6_exercicio4('banana', 'a', 'o')
+  capitulo6_exercicio5('Eu estou aqui')
+
 
 
 
