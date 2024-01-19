@@ -460,6 +460,45 @@ const capitulo7_exercicio2 = (): void => {
   console.log(enderecoaleatorio)
 }
 
+const capitulo7_exercicio3 = (): void => {
+  console.log('Capítulo 7.3 Fácil: Defina um tipo para representar um livro, com título, autor e ano de publicação')
+  type Livro = {
+ titulo: string;
+ autor: string;
+ anoPublicacao: number;
+  }
+}
+
+type Livro = {
+  titulo: string;
+  autor: string;
+  anoPublicacao: number;
+   }
+ const capitulo7_exercicio4 = (livros: Livro[]): void => {
+   console.log('Capítulo 7.4 Fácil: Escreva uma função que aceite um array de livros e retorne o livro mais recente');
+   let maisRecente: Livro | undefined
+   let maiorAno: number = 0
+   livros.forEach((livro: Livro) => {
+     if (livro.anoPublicacao > maiorAno) {
+       maiorAno = livro.anoPublicacao
+       maisRecente = livro
+     }
+   })
+   console.log(maisRecente)
+ }
+ const livros: Livro[] = [
+     {
+     titulo: 'unicornios, onde vivem?',
+     autor: 'Jeffinho',
+     anoPublicacao:2022
+     },
+     {
+     titulo: 'O Silêncio nas Estrelas',
+     autor: 'Renata Almeida',
+     anoPublicacao: 2024
+     }
+ ]
+
 
 
 
@@ -744,8 +783,14 @@ const main = (): void => {
   //capitulo6_exercicio7('Ola, mundo!')
 
 
+
+
   //capitulo7_exercicio1()
   //capitulo7_exercicio2()
+  //capitulo7_exercicio3()
+  capitulo7_exercicio4(livros)
+
+
 
 
 
