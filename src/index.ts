@@ -158,6 +158,11 @@ const capitulo3_exercicio3= (array: number[] = []): void => {
   console.log(maior)
 }
 
+const capitulo3_exercicio4 = (array: number[]): void => {
+  console.log('capitulo 3.4 Fácil: Crie um novo array removendo os elementos duplicados de outro array')
+  console.log(new Set(array))
+}  
+
 const capitulo3_exercicio5 = (array: number[]): void => {
   console.log('capitulo 3.5 Moderado: Desenvolva uma função que ordene um array de números')
   console.log(array.sort())
@@ -607,6 +612,7 @@ const capitulo10_exercicio14 = (lado1: number, lado2: number, lado3: number): vo
   }else console.log('O triângulo não existe')
 }
 
+
 const main = (): void => {
 
   // capitulo1_exercicio1()
@@ -637,9 +643,11 @@ const main = (): void => {
   // capitulo3_exercicio1([1, 2, 3])
   // capitulo3_exercicio2([1, 2, 3])
   // capitulo3_exercicio3([1, 1034, 3, 4, 5, 85])
+  //capitulo3_exercicio4([1, 3, 4, 2, 7, 2, 4])
+
   //capitulo3_exercicio5([1, 3, 4, 2, 7])
   //capitulo3_exercicio6([1, 3, 4, 2, 7])
-  capitulo3_exercicio7([1, 3, 4, 2, 7], [8, 12, 18, 24,])
+  //capitulo3_exercicio7([1, 3, 4, 2, 7], [8, 12, 18, 24,])
 
 
 
