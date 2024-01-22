@@ -902,6 +902,15 @@ const capitulo10_exercicio8 = (numero: number): void => {
   } 
 }
 
+const capitulo10_exercicio9 = (palavra1: string, palavra2: string): void => {
+  console.log('capitulo 10.9 Moderado: Desenvolva uma função que determine se uma palavra é um anagrama de outra')
+  palavra1 = palavra1.split('').sort().join('')
+  palavra2 = palavra2.split('').sort().join('')
+  if(palavra1===palavra2){
+    console.log('São anagramas!')
+  }else console.log('Não são anagramas')
+}
+
 const capitulo10_exercicio10 = (idade: number): void => {
   console.log('capitulo 10.10 Moderado: Implemente uma função que verifique se uma pessoa pode votar com base na idade')
     if(idade > 15){
@@ -1047,7 +1056,7 @@ const main = (): void => {
   // const novo_evento: Evento = capitulo8_exercicio6(evento1, evento2)
   // console.log(novo_evento)
   
-  
+
   //   capitulo8_exercicio7()
   //   let transacao1: Transacao_banc = {
   //     tipo: 'Retirada de Dinheiro',
@@ -1092,6 +1101,7 @@ const main = (): void => {
   // console.log(capitulo10_exercicio6(400))
   // capitulo10_exercicio7(12)
   // capitulo10_exercicio8(15)
+  //capitulo10_exercicio9('listen', 'silent')
   // capitulo10_exercicio10(16)
   // capitulo10_exercicio14(5, 6, 7)
 }
