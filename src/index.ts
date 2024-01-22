@@ -642,6 +642,28 @@ const capitulo8_exercicio4 = (produto1: Produto, produto2: Produto): Produto => 
     return novo_produto
   }
 
+const capitulo8_exercicio5 = (): void => {
+    console.log('capitulo 8.5 Moderado: Declare um tipo para representar um evento, contendo título, data e um array de palestrantes')
+    
+  }
+  type Evento = {
+      titulo: string,
+      data: string|Date,
+      palestrantes: string[]
+    } 
+    
+  const capitulo8_exercicio6 = (evento1: Evento, evento2: Evento): Evento => {
+    console.log('capitulo 8.6 Moderado: Crie uma função que aceite dois eventos e retorne um novo evento combinado')
+    let array: string[] = []
+    array = array.concat(evento1.palestrantes, evento2.palestrantes)
+    let novo_evento: Evento = {
+      titulo: `${evento1.titulo} E ${evento2.titulo}`,
+      data: `datas: ${evento1.data.toLocaleString('pt-br')} E ${evento2.data.toLocaleString('pt-br')}`,
+      palestrantes: array
+    }
+    return novo_evento
+  }
+
 //---------------------------------------------------------------------------------------------------------------------------
 
 const capitulo9_exercicio1 = (): void =>{
@@ -971,18 +993,34 @@ const main = (): void => {
   // capitulo8_exercicio1()
   // capitulo8_exercicio2()
   //capitulo8_exercicio3()
-  let produto1: Produto = {
-    nome: '3 pinças',
-    descricao: 'esse produto é legal',
-    preco: 'R$15.00'
-  }
-  let produto2: Produto = {
-    nome: 'cera de depilação + fita de depilação',
-    descricao: 'esse produto é daora',
-    preco: 'R$100.00'
-}
-let novo_produto: Produto = capitulo8_exercicio4(produto1, produto2)
-console.log(novo_produto)
+  //   let produto1: Produto = {
+//     nome: '3 pinças',
+//     descricao: 'esse produto é legal',
+//     preco: 'R$15.00'
+  //   }
+  //   let produto2: Produto = {
+//     nome: 'cera de depilação + fita de depilação',
+//     descricao: 'esse produto é daora',
+//     preco: 'R$100.00'
+  // }
+  // let novo_produto: Produto = capitulo8_exercicio4(produto1, produto2)
+  // console.log(novo_produto)
+  //capitulo8_exercicio5()
+  
+  // let evento1: Evento = {
+  //   titulo: 'Typescript',
+  //   data: new Date('2024-02-19 13:30:00'),
+  //   palestrantes: ['Jeffin', 'Jorgin']
+
+  // }
+  // let evento2: Evento = {
+  //   titulo: 'Códigos',
+  //   data: new Date('2024-02-24 14:30:00'),
+  //   palestrantes: ['Joao', 'Pedro']
+  // }
+  // const novo_evento: Evento = capitulo8_exercicio6(evento1, evento2)
+  // console.log(novo_evento)
+
 
 
   // capitulo9_exercicio1()
