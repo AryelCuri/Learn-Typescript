@@ -615,6 +615,32 @@ const capitulo8_exercicio2 = (): void => {
   console.log(`nome: ${usuario.nome} , email: ${usuario.email}`) 
 }
 
+const capitulo8_exercicio3 = (): void => {
+  console.log('capitulo 8.3 Fácil: Defina um tipo para representar um produto, com nome, preço e descrição.')
+  type Produto = {
+    nome: string,
+    descricao: string,
+    preco: string
+  }
+  console.log() 
+}
+
+type Produto = {
+  nome: string,
+  descricao: string,
+  preco: string
+}
+const capitulo8_exercicio4 = (produto1: Produto, produto2: Produto): Produto => {
+  console.log('capitulo 8.4 Fácil: Escreva uma função que aceite dois produtos e retorne um novo produto combinado')
+    const preco: string = 'R$' + (Number(produto1.preco.replace('R$', '')) + Number(produto2.preco.replace('R$', ''))).toString()
+  let novo_produto: Produto = {
+
+    nome: `kit ${produto1.nome} e ${produto2.nome}`,
+    descricao: `${produto1.descricao}, ${produto2.descricao}`,
+    preco 
+  }
+    return novo_produto
+  }
 
 //---------------------------------------------------------------------------------------------------------------------------
 
@@ -943,9 +969,20 @@ const main = (): void => {
 
 
   // capitulo8_exercicio1()
-  //capitulo8_exercicio2()
-
-
+  // capitulo8_exercicio2()
+  //capitulo8_exercicio3()
+  let produto1: Produto = {
+    nome: '3 pinças',
+    descricao: 'esse produto é legal',
+    preco: 'R$15.00'
+  }
+  let produto2: Produto = {
+    nome: 'cera de depilação + fita de depilação',
+    descricao: 'esse produto é daora',
+    preco: 'R$100.00'
+}
+let novo_produto: Produto = capitulo8_exercicio4(produto1, produto2)
+console.log(novo_produto)
 
 
   // capitulo9_exercicio1()
