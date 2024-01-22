@@ -664,6 +664,32 @@ const capitulo8_exercicio5 = (): void => {
     return novo_evento
   }
 
+  type transacao_banc = {
+    tipo: string,
+    valor: string,
+    data: string|Date
+  } 
+
+const capitulo8_exercicio7 = (): void => {
+  console.log('capitulo 8.7 Moderado: Defina um tipo para representar uma transação bancária, com tipo, valor e data')
+}
+
+type Transacao_banc = {
+  tipo: string,
+  valor: string,
+  data: string|Date
+} 
+
+const capitulo8_exercicio8 = (transacao1: Transacao_banc, transacao2: Transacao_banc): Transacao_banc => {
+console.log('capitulo 8.8 Difícil: Escreva uma função que aceite duas transações bancárias e retorne um novo objeto com o saldo resultante')
+  const novo_saldo: Transacao_banc = {
+  tipo: 'Novo Saldo',
+  valor: (parseFloat(transacao2.valor.replace('R$', '')) - parseFloat(transacao1.valor.replace('R$', ''))).toFixed(2).toString(),
+  data: new Date()
+}
+return novo_saldo
+}
+
 //---------------------------------------------------------------------------------------------------------------------------
 
 const capitulo9_exercicio1 = (): void =>{
@@ -1005,8 +1031,8 @@ const main = (): void => {
   // }
   // let novo_produto: Produto = capitulo8_exercicio4(produto1, produto2)
   // console.log(novo_produto)
-  //capitulo8_exercicio5()
   
+  //capitulo8_exercicio5()
   // let evento1: Evento = {
   //   titulo: 'Typescript',
   //   data: new Date('2024-02-19 13:30:00'),
@@ -1020,6 +1046,23 @@ const main = (): void => {
   // }
   // const novo_evento: Evento = capitulo8_exercicio6(evento1, evento2)
   // console.log(novo_evento)
+  
+  
+  //   capitulo8_exercicio7()
+  //   let transacao1: Transacao_banc = {
+  //     tipo: 'Retirada de Dinheiro',
+  //     valor: 'R$20.00',
+  //     data: new Date('2024-02-19 13:30:00')
+  // } 
+
+  //   let transacao2: Transacao_banc = {
+  //     tipo: 'Depósito em Dinheiro',
+  //     valor: 'R$40.00',
+  //     data: new Date('2024-02-19 14:30:00')
+  // } 
+  // const novoSaldo = capitulo8_exercicio8(transacao1, transacao2)
+  // console.log(novoSaldo)
+
 
 
 
