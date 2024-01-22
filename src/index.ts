@@ -593,6 +593,7 @@ console.log(notaAlta)
 }
 
 //-----------------------------------------------------------------------------------------------------------------
+
 const capitulo8_exercicio1 = (): void => {
   console.log('capitulo 8.1 Fácil: Declare um tipo para representar um usuário, com nome de usuário e e-mail')
   type Usuario = {
@@ -601,7 +602,18 @@ const capitulo8_exercicio1 = (): void => {
   }  
 }
 
-
+const capitulo8_exercicio2 = (): void => {
+  console.log('capitulo 8.2 Fácil: Crie uma função que combine dois objetos do tipo usuário.')
+  type Usuario = {
+    nome: string,
+    email: string
+  }
+  let usuario: Usuario = {
+    nome: 'Aryel',
+    email: 'bolinha123@gmail.com'
+}
+  console.log(`nome: ${usuario.nome} , email: ${usuario.email}`) 
+}
 
 
 //---------------------------------------------------------------------------------------------------------------------------
@@ -931,7 +943,7 @@ const main = (): void => {
 
 
   // capitulo8_exercicio1()
-
+  //capitulo8_exercicio2()
 
 
 
