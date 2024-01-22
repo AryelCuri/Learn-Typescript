@@ -968,6 +968,15 @@ const capitulo10_exercicio12 = (senha: string): void => {
   }else console.log('precisa ter numeros, letras e caracteres especiais')
 }
 
+const capitulo10_exercicio13 = (palavra: string): void => {
+  console.log('capitulo 1.8 Difícil: Desenvolva uma função que determine se uma palavra é um palíndromo e imprima o resultado')
+ 
+ if(palavra.split('').reverse().join('') === palavra){
+  console.log(palavra, 'é um palíndromo')
+
+ }else console.log(palavra, 'não é um palíndromo')
+}
+
 const capitulo10_exercicio14 = (lado1: number, lado2: number, lado3: number): void => {
   console.log('capitulo10.14 Difícil: Implemente uma função que classifique um triângulo com base em seus lados (equilátero,isósceles ou escaleno)')
 
@@ -1153,7 +1162,7 @@ const main = (): void => {
   // capitulo10_exercicio10(16)
   // console.log(capitulo10_exercicio11(2))
   // capitulo10_exercicio12('Leyra123@')
-
+  capitulo10_exercicio13('asa')
   // capitulo10_exercicio14(5, 6, 7)
 }
 main()
