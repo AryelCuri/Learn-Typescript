@@ -562,7 +562,18 @@ console.log(notaAlta)
 }
 
 //-----------------------------------------------------------------------------------------------------------------
+const capitulo8_exercicio1 = (): void => {
+  console.log('capitulo 8.1 Fácil: Declare um tipo para representar um usuário, com nome de usuário e e-mail')
+  type Usuario = {
+    usuario: string,
+    email: string
+  }  
+}
 
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------
 
 const capitulo9_exercicio1 = (): void =>{
   console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
@@ -860,23 +871,23 @@ const main = (): void => {
   // capitulo6_exercicio1('Hello, ', 'World!')
   // capitulo6_exercicio2('alegre', 'mente')
   // capitulo6_exercicio3('     asdasd     ')
-  //capitulo6_exercicio4('banana', 'a', 'o')
-  //capitulo6_exercicio5('Eu estou aqui')
-  //capitulo6_exercicio6('eu estou aqui')
-  //capitulo6_exercicio7('Ola, mundo!')
+  // capitulo6_exercicio4('banana', 'a', 'o')
+  // capitulo6_exercicio5('Eu estou aqui')
+  // capitulo6_exercicio6('eu estou aqui')
+  // capitulo6_exercicio7('Ola, mundo!')
 
 
   
 
 
 
-  //capitulo7_exercicio1()
-  //capitulo7_exercicio2()
-  //capitulo7_exercicio3()
-  //capitulo7_exercicio4(livros)
-  //capitulo7_exercicio5()
-  //capitulo7_exercicio6()
-  //capitulo7_exercicio7()
+  // capitulo7_exercicio1()
+  // capitulo7_exercicio2()
+  // capitulo7_exercicio3()
+  // capitulo7_exercicio4(livros)
+  // capitulo7_exercicio5()
+  // capitulo7_exercicio6()
+  // capitulo7_exercicio7()
 //   capitulo7_exercicio8({
 //     nome: 'cursoBrabo',
 //     instrutor: 'jeff',
@@ -885,6 +896,7 @@ const main = (): void => {
 // })
 
 
+  // capitulo8_exercicio1()
 
 
 
@@ -898,9 +910,9 @@ const main = (): void => {
   // capitulo9_exercicio6()
   // capitulo9_exercicio7([1, 2, 3, 4, 5])
   // capitulo9_exercicio10()
-  //capitulo9_exercicio11('asd dsa asd')
+  // capitulo9_exercicio11('asd dsa asd')
   // capitulo9_exercicio12()
-  capitulo9_exercicio14()
+  // capitulo9_exercicio14()
   
 
 
