@@ -940,6 +940,34 @@ const capitulo10_exercicio11 = (numero: number): boolean => {
   return true
 }
 
+const capitulo10_exercicio12 = (senha: string): void => {
+  console.log('capitulo10.12 Difícil: Desenvolva uma função que valide se uma senha atende a critérios de segurança (mínimo de caracteres, presença de letras e números)')
+  let temLetra = false
+  let temNumero = false
+  let temEspecial = false
+
+
+ if (senha.length >= 8){
+  senha.split('').forEach((caracter: string) => {
+    if (!isNaN(parseInt(caracter))) { 
+    temNumero = true
+
+    }else if(/[^a-zA-Z0-9]/.test(caracter)) {
+        
+        temEspecial = true;
+      } else {
+        temLetra = true;
+      }
+  })
+ }
+
+  if(senha.length < 8){
+    console.log('precisa de pelo menos 8 caracteres')
+  }if(temLetra && temNumero && temEspecial){
+    console.log('senha aceita')
+  }else console.log('precisa ter numeros, letras e caracteres especiais')
+}
+
 const capitulo10_exercicio14 = (lado1: number, lado2: number, lado3: number): void => {
   console.log('capitulo10.14 Difícil: Implemente uma função que classifique um triângulo com base em seus lados (equilátero,isósceles ou escaleno)')
 
@@ -1124,6 +1152,8 @@ const main = (): void => {
   //  capitulo10_exercicio9('listen', 'silent')
   // capitulo10_exercicio10(16)
   // console.log(capitulo10_exercicio11(2))
+  // capitulo10_exercicio12('Leyra123@')
+
   // capitulo10_exercicio14(5, 6, 7)
 }
 main()
