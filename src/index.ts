@@ -251,6 +251,37 @@ const capitulo4_exercicio7 = (array: string[] = []): void => {
   console.log(maior)
 }   
 
+type Resultado = {
+  valor: number,
+  index: number
+}
+const capitulo4_exercicio8 = (alvo: number, array: number[]): Resultado => {
+  console.log('capitulo 4.8 Difícil: Escreva uma função que realize a busca binária em um array ordenado.')
+
+  let inicio: number = 0
+  let fim: number = array.length - 1
+
+
+  while(inicio <= fim){
+    const meio: number = Math.floor((inicio + fim)/2)
+
+    if(array[meio] === alvo){
+      return {
+        valor: array[meio],
+        index: meio
+      }
+    }else if(array[meio] < alvo){
+      inicio = meio + 1
+    }else{
+      fim = meio - 1
+    }
+  }
+  return {
+    valor: -1,
+    index: -1
+  }
+}
+
 //-----------------------------------------------------------------------------------------------------
 
 
@@ -853,7 +884,10 @@ const main = (): void => {
   // capitulo4_exercicio5('hexagono')
   // capitulo4_exercicio6('a torre da derrota')
   // capitulo4_exercicio7(['a', 'adfs', 'asr'])
-
+  //  const array: number[] = [1, 2, 3,4,5,6,7,8,9,10]
+  //  const alvo: number = 7
+  //  const resultado: Resultado = capitulo4_exercicio8(alvo, array)
+  //  console.log(resultado)
 
 
 
