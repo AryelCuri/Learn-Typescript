@@ -920,6 +920,26 @@ const capitulo10_exercicio10 = (idade: number): void => {
   }
 }  
 
+const capitulo10_exercicio11 = (numero: number): boolean => {
+  console.log('capitulo 10.11 Difícil: Escreva uma função que determine se um número é primo')
+  if(numero < 2){
+    console.log(numero)
+    return false
+  }if(numero === 2 || numero === 3 || numero === 5 || numero ===7){
+    console.log(numero)
+    return true
+  }if(numero % 2 ===0){
+    return false
+  }if(numero % 3 ===0){
+    return false
+  }if(numero % 5 === 0){
+    return false
+  }if(numero % 7 === 0){
+    return false
+  }
+  return true
+}
+
 const capitulo10_exercicio14 = (lado1: number, lado2: number, lado3: number): void => {
   console.log('capitulo10.14 Difícil: Implemente uma função que classifique um triângulo com base em seus lados (equilátero,isósceles ou escaleno)')
 
@@ -1101,8 +1121,9 @@ const main = (): void => {
   // console.log(capitulo10_exercicio6(400))
   // capitulo10_exercicio7(12)
   // capitulo10_exercicio8(15)
-  //capitulo10_exercicio9('listen', 'silent')
+  //  capitulo10_exercicio9('listen', 'silent')
   // capitulo10_exercicio10(16)
+  // console.log(capitulo10_exercicio11(2))
   // capitulo10_exercicio14(5, 6, 7)
 }
 main()
