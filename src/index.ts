@@ -829,6 +829,17 @@ const capitulo9_exercicio14 = (): void => {
     }
 }
 
+const capitulo9_exercicio15 = (maximo: number): void => {
+  console.log('capitulo 9.15 Difícil: Desenvolva um loop que calcule a sequência de Fibonacci até o vigésimo termo.')
+  const arrray: number[] = [1,1]
+  
+  for(let i = 0; i <= maximo; i++){
+      console.log(arrray)
+      if(i > 1){
+          arrray.push(arrray[i - 1] + arrray[i - 2])
+      }
+  }
+}
 
 //-----------------------------------------------------------------------------------------------------
 
@@ -1161,11 +1172,12 @@ const main = (): void => {
   // capitulo9_exercicio6()
   // capitulo9_exercicio7([1, 2, 3, 4, 5])
   // capitulo9_exercicio9(10)
-
   // capitulo9_exercicio10()
   // capitulo9_exercicio11('asd dsa asd')
   // capitulo9_exercicio12()
   // capitulo9_exercicio14()
+  // capitulo9_exercicio15(20)
+
   
 
 
