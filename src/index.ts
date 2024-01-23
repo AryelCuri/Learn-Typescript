@@ -769,6 +769,18 @@ const capitulo9_exercicio7 = (array: number[] =[]): void => {
   console.log(invertido)
 }
 
+const capitulo9_exercicio9 = (maximo: number): void => {
+  console.log('capitulo 9.9 Moderado: Crie um loop que imprima os números de Fibonacci até o décimo termo')
+  const arrray: number[] = [1,1]
+  
+  for(let i = 0; i <= maximo; i++){
+      console.log(arrray)
+      if(i > 1){
+          arrray.push(arrray[i - 1] + arrray[i - 2])
+      }
+  }
+}
+
 const capitulo9_exercicio10 = (): void => {
   console.log('ca9.10 Moderado: Implemente um loop que preencha um array com os números quadrados perfeitos até 100')
     const quadrados: number[] = []
@@ -1070,11 +1082,9 @@ const main = (): void => {
   // capitulo6_exercicio5('Eu estou aqui')
   // capitulo6_exercicio6('eu estou aqui')
   // capitulo6_exercicio7('Ola, mundo!')
-  //capitulo6_exercicio8()
+  // capitulo6_exercicio8()
 
 
-
-  
 
 
 
@@ -1150,6 +1160,8 @@ const main = (): void => {
   // capitulo9_exercicio5(['abc', 'dfg', 'hij'])
   // capitulo9_exercicio6()
   // capitulo9_exercicio7([1, 2, 3, 4, 5])
+  // capitulo9_exercicio9(10)
+
   // capitulo9_exercicio10()
   // capitulo9_exercicio11('asd dsa asd')
   // capitulo9_exercicio12()
