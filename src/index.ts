@@ -802,6 +802,25 @@ const capitulo9_exercicio7 = (array: number[] =[]): void => {
   console.log(invertido)
 }
 
+const capitulo9_exercicio8 = (num: number): boolean => {
+  if (num < 2) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++)
+      if (num % i === 0) return false;
+  return true;
+}
+
+function encontrarPrimoProximo(alvo: number): number {
+  let anterior = alvo - 1;
+  let seguinte = alvo + 1;
+
+  while (!capitulo9_exercicio8(anterior) && !capitulo9_exercicio8(seguinte)) {
+      anterior--;
+      seguinte++;
+  }
+
+  return capitulo9_exercicio8(anterior) ? anterior : seguinte;
+}
+
 const capitulo9_exercicio9 = (maximo: number): void => {
   console.log('capitulo 9.9 Moderado: Crie um loop que imprima os números de Fibonacci até o décimo termo')
   const arrray: number[] = [1,1]
@@ -846,6 +865,25 @@ const capitulo9_exercicio10 = (): void => {
         console.log(raiz)
         i++
     }
+}
+
+const capitulo9_exercicio13 = (num: number): boolean => {
+  if (num < 2) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++)
+      if (num % i === 0) return false;
+  return true;
+}
+
+function encontrarPrimoProximod(alvo: number): number {
+  let anterior = alvo - 1;
+  let seguinte = alvo + 1;
+
+  while (!capitulo9_exercicio13(anterior) && !capitulo9_exercicio13(seguinte)) {
+      anterior--;
+      seguinte++;
+  }
+
+  return capitulo9_exercicio13(anterior) ? anterior : seguinte;
 }
 
 const capitulo9_exercicio14 = (): void => {
@@ -1208,10 +1246,21 @@ const main = (): void => {
   // capitulo9_exercicio5(['abc', 'dfg', 'hij'])
   // capitulo9_exercicio6()
   // capitulo9_exercicio7([1, 2, 3, 4, 5])
+
+  // console.log('capitulo 9.8 Moderado: Desenvolva um loop que encontre o número primo mais próximo de 100') // exercicio 8
+  // const numeroAlvo = 100;
+  // const primoMaisProximo = encontrarPrimoProximo(numeroAlvo)
+  // console.log(`Alvo: ${numeroAlvo}, mais proximo é: ${primoMaisProximo}.`)
+
   // capitulo9_exercicio9(10)
   // capitulo9_exercicio10()
   // capitulo9_exercicio11('asd dsa asd')
   // capitulo9_exercicio12()
+  // console.log('capitulo 9.13 Difícil: Escreva um loop que encontre o maior número primo menor que 1000')
+  // const numeroAlvo = 1000
+  // const primoMaisProximo = encontrarPrimoProximod(numeroAlvo)
+  // console.log(`Maior primo menos que ${numeroAlvo}: ${primoMaisProximo}.`)
+
   // capitulo9_exercicio14()
   // capitulo9_exercicio15(20)
 
