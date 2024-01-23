@@ -54,6 +54,18 @@ const capitulo1_exercicio8 = (palavra: string): void => {
  }else console.log(palavra, 'não é um palíndromo')
 }
 
+const capitulo1_exercicio9 = (maximo: number): void => {
+  console.log('capitulo 9.15 Difícil: Desenvolva um loop que calcule a sequência de Fibonacci até o vigésimo termo.')
+  const arrray: number[] = [1,1]
+  
+  for(let i = 0; i <= maximo; i++){
+      console.log(arrray)
+      if(i > 1){
+          arrray.push(arrray[i - 1] + arrray[i - 2])
+      }
+  }
+}
+
 //-----------------------------------------------------------------------------------------------------
 
 
@@ -1033,6 +1045,8 @@ const main = (): void => {
   // capitulo1_exercicio6(3)
   // capitulo1_exercicio7([12, 24, 65, 4])
   // capitulo1_exercicio8('asa')
+  // capitulo1_exercicio9(22)
+
 
 
 
@@ -1044,8 +1058,8 @@ const main = (): void => {
   // capitulo2_exercicio5()
   // capitulo2_exercicio6(['asc'])
   // capitulo2_exercicio7()
-  //capitulo2_exercicio8()
-  //console.log(capitulo2_exercicio9(1))
+  // capitulo2_exercicio8()
+  // console.log(capitulo2_exercicio9(1))
 
 
 
@@ -1053,10 +1067,10 @@ const main = (): void => {
   // capitulo3_exercicio1([1, 2, 3])
   // capitulo3_exercicio2([1, 2, 3])
   // capitulo3_exercicio3([1, 1034, 3, 4, 5, 85])
-  //capitulo3_exercicio4([1, 3, 4, 2, 7, 2, 4])
-  //capitulo3_exercicio5([1, 3, 4, 2, 7])
-  //capitulo3_exercicio6([1, 3, 4, 2, 7])
-  //capitulo3_exercicio7([1, 3, 4, 2, 7], [8, 12, 18, 24,])
+  // capitulo3_exercicio4([1, 3, 4, 2, 7, 2, 4])
+  // capitulo3_exercicio5([1, 3, 4, 2, 7])
+  // capitulo3_exercicio6([1, 3, 4, 2, 7])
+  // capitulo3_exercicio7([1, 3, 4, 2, 7], [8, 12, 18, 24,])
 
 
 
