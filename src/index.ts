@@ -189,6 +189,27 @@ const capitulo3_exercicio7 = (array: number[], array2: number[]): void => {
   console.log('capitulo 3.7 Moderado: Implemente uma função que concatene dois arrays')
   console.log(array.concat(array2))
 }
+
+const capitulo3_exercicio8 = (array: number[]): number[] => {
+  console.log('capitulo 3.8 Difícil: Escreva uma função que encontre a sublista contígua de maior soma em um array'); 
+  let maximoAgora = array[0]
+  let maximo = array[0]
+  let comeco = 0
+  let final = 0
+
+  for (let i = 1; i < array.length; i++) {
+      maximoAgora = Math.max(array[i], maximoAgora + array[i])
+      if (maximoAgora === array[i]) {
+              comeco = i
+      }
+
+      if (maximoAgora > maximo) {
+              maximo = maximoAgora
+              final = i
+      }
+    }
+return array.slice(comeco, final + 1)
+}
 //-----------------------------------------------------------------------------------------------------
 
 
@@ -1071,6 +1092,8 @@ const main = (): void => {
   // capitulo3_exercicio5([1, 3, 4, 2, 7])
   // capitulo3_exercicio6([1, 3, 4, 2, 7])
   // capitulo3_exercicio7([1, 3, 4, 2, 7], [8, 12, 18, 24,])
+  // let maiorSub = capitulo3_exercicio8([-2, 1, -3, 4, -1, 2, 1, -5, 4]);
+  // console.log(maiorSub)
 
 
 
