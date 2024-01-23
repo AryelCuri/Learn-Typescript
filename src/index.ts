@@ -431,7 +431,7 @@ const capitulo6_exercicio3 = (frase: string): void => {
   console.log(frase.trim())
 }
 
-  const capitulo6_exercicio4 = (palavra: string, letraAntiga: string, letraNova: string): void => {
+const capitulo6_exercicio4 = (palavra: string, letraAntiga: string, letraNova: string): void => {
     console.log('Capítulo 6.4 Fácil: Crie uma função que substitua todas as ocorrências de uma letra por outra em uma string')
 console.log(palavra.replaceAll(letraAntiga, letraNova))
 }
@@ -461,10 +461,19 @@ const capitulo6_exercicio7 =(frase: string): void => {
     console.log(frase.replace(/[^\w\s]/gi, ''))
 }
 
+const capitulo6_exercicio8 = (): void => {
+  console.log('capitulo  6.8 Difícil: Escreva uma função que formate uma data em formato específico')
+  let data: Date = new Date(Date.now())
+  console.log(data.toLocaleDateString('pt-br'))
+  console.log(data.toLocaleTimeString('pt-br'))
+  console.log(data.getDay(), data.getDate(), data.getFullYear())
+  console.log(`Dia da semana = ${data.getDay()}, Dia do mês = ${data.getDate()}, Mês = ${data.getMonth() + 1}, Ano atual = ${data.getFullYear()}`)
+}
 
 
 
 //-------------------------------------------------------------------------------------------------------------------------------
+
 
 const capitulo7_exercicio1 = (): void => {
   console.log('Capítulo 7.1 Fácil: Declare um tipo que represente um endereço, contendo rua, cidade e código postal')
@@ -941,7 +950,7 @@ const capitulo10_exercicio11 = (numero: number): boolean => {
 }
 
 const capitulo10_exercicio12 = (senha: string): void => {
-  console.log('capitulo10.12 Difícil: Desenvolva uma função que valide se uma senha atende a critérios de segurança (mínimo de caracteres, presença de letras e números)')
+  console.log('capitulo 10.12 Difícil: Desenvolva uma função que valide se uma senha atende a critérios de segurança (mínimo de caracteres, presença de letras e números)')
   let temLetra = false
   let temNumero = false
   let temEspecial = false
@@ -1061,6 +1070,8 @@ const main = (): void => {
   // capitulo6_exercicio5('Eu estou aqui')
   // capitulo6_exercicio6('eu estou aqui')
   // capitulo6_exercicio7('Ola, mundo!')
+  //capitulo6_exercicio8()
+
 
 
   
@@ -1162,7 +1173,7 @@ const main = (): void => {
   // capitulo10_exercicio10(16)
   // console.log(capitulo10_exercicio11(2))
   // capitulo10_exercicio12('Leyra123@')
-  capitulo10_exercicio13('asa')
+  // capitulo10_exercicio13('asa')
   // capitulo10_exercicio14(5, 6, 7)
 }
 main()
