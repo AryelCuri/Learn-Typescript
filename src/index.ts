@@ -1094,6 +1094,47 @@ const capitulo10_exercicio14 = (lado1: number, lado2: number, lado3: number): vo
 }
 
 
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const capitulo13_exercicio1 = (): void => {
+  console.log('capitulo 4.8 Difícil: Escreva uma função que realize a busca binária em um array ordenado.')
+  interface Usuario {
+  nome: string;
+  email: string;
+  idade: number;
+  } 
+}
+
+interface Usuario {
+  nome: string
+  email: string
+  idade: number
+}
+
+class Cliente implements Usuario {
+  nome: string
+  email: string
+  idade: number
+  saldo: number
+
+  constructor(nome: string, email: string, idade: number, saldo: number) {
+    this.nome = nome
+    this.email = email
+    this.idade = idade
+    this.saldo = saldo
+  }
+
+  capitulo13_exercicio2(valor: number): void {
+    if (valor <= this.saldo) {
+      console.log(`${this.nome} fez uma compra de R$${valor.toFixed(2)}`)
+      this.saldo = this.saldo - valor
+    } else {
+      console.log(`${this.nome} não possui saldo suficiente para realizar a compra.`)
+    }
+  }
+}
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const main = (): void => {
 
   // capitulo1_exercicio1()
@@ -1268,7 +1309,6 @@ const main = (): void => {
 
 
 
-
   // console.log(capitulo10_exercicio1(1))
   // console.log(capitulo10_exercicio2(3))
   // console.log(capitulo10_exercicio3(''))
@@ -1285,5 +1325,13 @@ const main = (): void => {
   // capitulo10_exercicio12('Leyra123@')
   // capitulo10_exercicio13('asa')
   // capitulo10_exercicio14(5, 6, 7)
+
+
+  //capitulo13_exercicio1()
+  const cliente1 = new Cliente("João", "jão123@gmail.com", 28, 500.0)
+  cliente1.capitulo13_exercicio2(200)
+  cliente1.capitulo13_exercicio2(100)
+  cliente1.capitulo13_exercicio2(400)
+
 }
 main()
