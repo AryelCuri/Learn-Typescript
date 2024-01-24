@@ -1189,6 +1189,37 @@ const retangulo = new Retangulo(5, 2)
 console.log(retangulo.calcularArea(), retangulo.calcularPerimetro())
 }
 
+interface Usuario {
+  nome: string
+  email: string
+  idade: number
+  telefone? : string
+}
+class Cliente1 implements Usuario {
+  nome: string
+  email: string
+  idade: number
+  saldo: number
+  telefone?: string
+
+  constructor(nome: string, email: string, idade: number, saldo: number, telefone: string ='') {
+    this.nome = nome
+    this.email = email
+    this.idade = idade
+    this.saldo = saldo
+    this.telefone = telefone
+  }
+
+  capitulo13_exercicio5(valor: number): void {
+    console.log('capitulo 13.5 Fácil: Parâmetros Opcionais.Adicione um parâmetro opcional à interface Usuario chamado telefone. Atualize a classe Clientepara incluir ou não esse parâmetro.')
+    if (valor <= this.saldo) {
+      console.log(`${this.nome} fez uma compra de R$${valor.toFixed(2)}`)
+      this.saldo = this.saldo - valor
+    } else {
+      console.log(`${this.nome} não possui saldo suficiente para realizar a compra.`)
+    }
+  }
+}
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const main = (): void => {
 
@@ -1389,6 +1420,8 @@ const main = (): void => {
   // cliente1.capitulo13_exercicio2(400)
   //capitulo13_exercicio3()
   //capitulo13_exercicio4()
+  const cliente1 = new Cliente1("João", "jão123@gmail.com", 28, 500.0)
+   cliente1.capitulo13_exercicio5(200)
 
 }
 main()
