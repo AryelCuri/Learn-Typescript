@@ -1111,6 +1111,7 @@ interface Usuario {
   idade: number
 }
 
+
 class Cliente implements Usuario {
   nome: string
   email: string
@@ -1132,6 +1133,31 @@ class Cliente implements Usuario {
       console.log(`${this.nome} não possui saldo suficiente para realizar a compra.`)
     }
   }
+}
+
+interface Animal {
+  nome: string
+  barulhento: boolean
+}
+interface Ave extends Animal {
+  penas: boolean
+  bico: boolean
+  voa: boolean
+}
+
+interface Papagaio extends Ave{
+  fala: boolean
+}
+const capitulo13_exercicio3 = (): void => {
+const papagaio: Papagaio = {
+  nome: 'paraguaio',
+  barulhento: true,
+  bico: true,
+  penas: true,
+  voa: true,
+  fala: true
+} 
+console.log(papagaio)
 }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1328,10 +1354,11 @@ const main = (): void => {
 
 
   //capitulo13_exercicio1()
-  const cliente1 = new Cliente("João", "jão123@gmail.com", 28, 500.0)
-  cliente1.capitulo13_exercicio2(200)
-  cliente1.capitulo13_exercicio2(100)
-  cliente1.capitulo13_exercicio2(400)
+  // const cliente1 = new Cliente("João", "jão123@gmail.com", 28, 500.0)
+  // cliente1.capitulo13_exercicio2(200)
+  // cliente1.capitulo13_exercicio2(100)
+  // cliente1.capitulo13_exercicio2(400)
+  capitulo13_exercicio3()
 
 }
 main()
