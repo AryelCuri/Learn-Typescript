@@ -1097,7 +1097,7 @@ const capitulo10_exercicio14 = (lado1: number, lado2: number, lado3: number): vo
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 const capitulo13_exercicio1 = (): void => {
-  console.log('capitulo 4.8 Difícil: Escreva uma função que realize a busca binária em um array ordenado.')
+  console.log('13.1 Fácil: Criando uma Interface Simples   Crie uma interface chamada Usuario com propriedades como nome, email e idade.')
   interface Usuario {
   nome: string;
   email: string;
@@ -1126,6 +1126,8 @@ class Cliente implements Usuario {
   }
 
   capitulo13_exercicio2(valor: number): void {
+    console.log('13.2 Fácil: Implementação de Interface.Crie uma classe chamada Cliente que implementa a interface Usuario. Adicione métodos e propriedades específicos da classe.')
+
     if (valor <= this.saldo) {
       console.log(`${this.nome} fez uma compra de R$${valor.toFixed(2)}`)
       this.saldo = this.saldo - valor
@@ -1149,6 +1151,7 @@ interface Papagaio extends Ave{
   fala: boolean
 }
 const capitulo13_exercicio3 = (): void => {
+  console.log('capitulo 13.3 Fácil: Herança de Interface.Crie uma interface Animal com propriedades como nome e som. Em seguida, crie uma interface Ave que estenda a interface Animal e adicione propriedades específicas de aves')
 const papagaio: Papagaio = {
   nome: 'paraguaio',
   barulhento: true,
@@ -1158,6 +1161,32 @@ const papagaio: Papagaio = {
   fala: true
 } 
 console.log(papagaio)
+}
+
+
+interface FormaGeometrica {
+  calcularArea():  number
+  calcularPerimetro(): number
+}
+class Retangulo implements FormaGeometrica {
+    largura: number;
+    altura: number;
+    constructor(largura: number, altura: number) {
+        this.largura = largura;
+        this.altura = altura;
+    }
+    calcularArea(): number {
+        return this.largura * this.altura;
+    }
+
+    calcularPerimetro(): number {
+        return 2 * (this.largura + this.altura);
+    }
+}
+const capitulo13_exercicio4 = (): void => {
+  console.log(' capitulo 13.4 Fácil: Métodos em Interfaces. Defina uma interface FormaGeometrica com métodos como calcularArea e calcularPerimetro. Implemente essa interface em classes como Circulo e Retangulo')
+const retangulo = new Retangulo(5, 2) 
+console.log(retangulo.calcularArea(), retangulo.calcularPerimetro())
 }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1358,7 +1387,8 @@ const main = (): void => {
   // cliente1.capitulo13_exercicio2(200)
   // cliente1.capitulo13_exercicio2(100)
   // cliente1.capitulo13_exercicio2(400)
-  capitulo13_exercicio3()
+  //capitulo13_exercicio3()
+  //capitulo13_exercicio4()
 
 }
 main()
