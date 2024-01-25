@@ -1189,6 +1189,7 @@ const retangulo = new Retangulo(5, 2)
 console.log(retangulo.calcularArea(), retangulo.calcularPerimetro())
 }
 
+
 interface Usuario {
   nome: string
   email: string
@@ -1209,8 +1210,9 @@ class Cliente1 implements Usuario {
     this.saldo = saldo
     this.telefone = telefone
   }
+  
 
-  capitulo13_exercicio5(valor: number): void {
+   capitulo13_exercicio5(valor: number): void {
     console.log('capitulo 13.5 Fácil: Parâmetros Opcionais.Adicione um parâmetro opcional à interface Usuario chamado telefone. Atualize a classe Clientepara incluir ou não esse parâmetro.')
     if (valor <= this.saldo) {
       console.log(`${this.nome} fez uma compra de R$${valor.toFixed(2)}`)
@@ -1218,8 +1220,16 @@ class Cliente1 implements Usuario {
     } else {
       console.log(`${this.nome} não possui saldo suficiente para realizar a compra.`)
     }
+  
   }
 }
+const cliente1: Cliente1 = new Cliente1(
+  'Jão',
+  'Jão123@gmail.com',
+  23,
+  1000
+
+)
 
 interface OperacaoMatematica {
   soma( num: number, num1: number): number
@@ -1264,6 +1274,7 @@ class Calculadora implements OperacaoMatematica {
     }
 }
 const capitulo13_exercicio6 = (): void => {
+  console.log('13.6 Moderado: Interfaces para Funções. Crie uma interface chamada OperacaoMatematica que representa uma função matemática. Implemente essa interface em funções como soma, subtracao e multiplicacao')
 const calculadora: Calculadora = new Calculadora()
 console.log('soma: ',calculadora.soma(1, 1))
 console.log('subtracao: ',calculadora.subtracao(1, 1))
@@ -1297,6 +1308,7 @@ class Peixe implements Nadar {
   }
 }
 const capitulo13_exercicio7= (): void => {
+console.log('13.7 Moderado: Múltiplas Interfaces. Defina interfaces Voo e Nadar para representar comportamentos de animais. Implemente essas interfaces em classes como Pato e Peixe.')
 
 const pato = new Pato()
 pato.voar()
@@ -1316,6 +1328,8 @@ interface Carro extends Veiculo {
   cor: string
 }
 const capitulo13_exercicio8 = (): void =>{
+  console.log('13.8 Moderado: Extensão de Interfaces. Crie uma interface Veiculo com propriedades como modelo e ano. Em seguida, crie uma interface  Carro que estenda a interface Veiculo e adicione propriedades específicas de carros.')
+
 const meuCarro: Carro = {
   modelo: "Sedan",
   ano: 2022,
@@ -1527,7 +1541,7 @@ const main = (): void => {
   // capitulo13_exercicio3()
   // capitulo13_exercicio4()
   // const cliente1 = new Cliente1("João", "jão123@gmail.com", 28, 500.0)
-  // cliente1.capitulo13_exercicio5(200)
+   cliente1.capitulo13_exercicio5(200)
   // capitulo13_exercicio6()
   // capitulo13_exercicio7()
   // capitulo13_exercicio8()
