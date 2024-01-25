@@ -634,6 +634,7 @@ let notaAlta: number = Math.max(...curso.notasAlunos)
 console.log(notaAlta)
 }
 
+
 //-----------------------------------------------------------------------------------------------------------------
 
 const capitulo8_exercicio1 = (): void => {
@@ -657,25 +658,35 @@ const capitulo8_exercicio2 = (): void => {
   console.log(`nome: ${usuario.nome} , email: ${usuario.email}`) 
 }
 
-const capitulo8_exercicio3 = (): void => {
-  console.log('capitulo 8.3 Fácil: Defina um tipo para representar um produto, com nome, preço e descrição.')
-  type Produto = {
-    nome: string,
-    descricao: string,
-    preco: string
-  }
-  console.log() 
-}
-
-type Produto = {
+type ProdutoEx3 = {
   nome: string,
   descricao: string,
   preco: string
 }
-const capitulo8_exercicio4 = (produto1: Produto, produto2: Produto): Produto => {
+const capitulo8_exercicio3 = (): void => {
+console.log('capitulo 8.3 Fácil: Defina um tipo para representar um produto, com nome, preço e descrição.')
+let produto1: ProdutoEx3 = {
+  nome: '3 pinças',
+  descricao: 'esse produto é legal',
+  preco: 'R$15.00'
+   }
+   let produto2: ProdutoEx3 = {
+  nome: 'cera de depilação + fita de depilação',
+   descricao: 'esse produto é daora',
+   preco: 'R$100.00'
+   }
+   console.log(produto1, produto2)
+}
+
+type TProdutoCapitulo8Ex4 = {
+  nome: string,
+  descricao: string,
+  preco: string
+}
+const capitulo8_exercicio4 = (produto1: TProdutoCapitulo8Ex4, produto2: TProdutoCapitulo8Ex4): TProdutoCapitulo8Ex4 => {
   console.log('capitulo 8.4 Fácil: Escreva uma função que aceite dois produtos e retorne um novo produto combinado')
     const preco: string = 'R$' + (Number(produto1.preco.replace('R$', '')) + Number(produto2.preco.replace('R$', ''))).toString()
-  let novo_produto: Produto = {
+  let novo_produto: TProdutoCapitulo8Ex4 = {
 
     nome: `kit ${produto1.nome} e ${produto2.nome}`,
     descricao: `${produto1.descricao}, ${produto2.descricao}`,
@@ -1352,11 +1363,25 @@ const dicionario = {
 }
 
 const capitulo13_exercicio9 = (): void => {
+  console.log('capitulo 13.9 Moderado: Index Signatures. Defina uma interface chamada Dicionario que utilize index signatures para representar um dicionário com chaves e valores de tipos específicos.')
 console.log(dicionario['catual'])
 const dicionario_daora: Dicionario = dicionario
 Object.keys(dicionario_daora).forEach((palavra: string) => {
   console.log(`${palavra}: ${dicionario_daora[palavra]}`)
 })
+}
+
+interface IProduto {
+  preco: number
+  nome: string
+}
+class Produto implements IProduto {
+ readonly nome = 'caixa de som'
+ readonly preco = 100
+}
+const capitulo13_exercicio10= (): void => {
+const produto: Produto = new Produto()
+console.log(produto.nome, produto.preco)
 }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1447,27 +1472,18 @@ const main = (): void => {
   // capitulo7_exercicio5()
   // capitulo7_exercicio6()
   // capitulo7_exercicio7()
-//   capitulo7_exercicio8({
-//     nome: 'cursoBrabo',
-//     instrutor: 'jeff',
-//     arrayAlunos: ['aryel', 'jorgin', 'joaozin'],
-//     notasAlunos: [6, 8, 7.5]
-// })
+  // let curso1: Curso = {
+  //   nome: 'cursoBrabo',
+  //   instrutor: 'jeff',
+  //   arrayAlunos: ['aryel', 'jorgin', 'joaozin'],
+  //   notasAlunos: [6, 8, 7.5]
+  // }
+  //  capitulo7_exercicio8(curso1)
 
 
   // capitulo8_exercicio1()
   // capitulo8_exercicio2()
-  //capitulo8_exercicio3()
-  //   let produto1: Produto = {
-//     nome: '3 pinças',
-//     descricao: 'esse produto é legal',
-//     preco: 'R$15.00'
-  //   }
-  //   let produto2: Produto = {
-//     nome: 'cera de depilação + fita de depilação',
-//     descricao: 'esse produto é daora',
-//     preco: 'R$100.00'
-  // }
+  // capitulo8_exercicio3()
   // let novo_produto: Produto = capitulo8_exercicio4(produto1, produto2)
   // console.log(novo_produto)
   
@@ -1552,7 +1568,7 @@ const main = (): void => {
   // capitulo10_exercicio14(5, 6, 7)
 
 
-  //capitulo13_exercicio1()
+  // capitulo13_exercicio1()
   // const cliente1 = new Cliente("João", "jão123@gmail.com", 28, 500.0)
   // cliente1.capitulo13_exercicio2(200)
   // cliente1.capitulo13_exercicio2(100)
@@ -1565,6 +1581,7 @@ const main = (): void => {
   // capitulo13_exercicio7()
   // capitulo13_exercicio8()
   // capitulo13_exercicio9()
+  // capitulo13_exercicio10()
 
 }
 main()
