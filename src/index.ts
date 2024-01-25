@@ -1305,6 +1305,27 @@ const peixe = new Peixe()
 peixe.nadar()
 }
 
+
+interface Veiculo {
+  modelo: string
+  ano: number
+}
+
+interface Carro extends Veiculo {
+  marca: string
+  cor: string
+}
+const capitulo13_exercicio8 = (): void =>{
+const meuCarro: Carro = {
+  modelo: "Sedan",
+  ano: 2022,
+  marca: "Toyota",
+  cor: "Prata"
+};
+
+console.log("Meu carro:", meuCarro)
+}
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const main = (): void => {
 
@@ -1509,6 +1530,7 @@ const main = (): void => {
   // cliente1.capitulo13_exercicio5(200)
   // capitulo13_exercicio6()
   // capitulo13_exercicio7()
+  // capitulo13_exercicio8()
 
 }
 main()
