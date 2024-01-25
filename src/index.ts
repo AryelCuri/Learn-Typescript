@@ -1220,6 +1220,62 @@ class Cliente1 implements Usuario {
     }
   }
 }
+
+interface OperacaoMatematica {
+  soma( num: number, num1: number): number
+  subtracao(num: number, num1: number): number
+  multiplicacao(num: number, num1: number): number
+  divisao(num: number, num1: number): number
+  raizQuadrada(num: number): number
+  restoDivisao(num: number, num1: number): number
+  porcentagem(num: number, num1: number): number
+  fatorial(num: number): number
+  potencia(base: number, expoente: number): number
+
+}
+class Calculadora implements OperacaoMatematica { 
+    soma = (num: number, num1: number): number => {
+      return num + num1
+    }
+    subtracao = (num: number, num1: number): number => {
+      return num - num1
+    }
+    multiplicacao = (num: number, num1: number): number => {
+      return num * num1  
+    }
+    divisao = (num: number, num1: number): number => {
+      return num/num1
+    }
+    raizQuadrada = (num: number): number =>{
+      return Math.sqrt(num)
+    }
+
+    restoDivisao = (num: number, num1: number): number => {
+        return num % num1
+    }
+    porcentagem = (num: number, num1: number): number => {
+        return (num/num1) * 100
+    }
+    fatorial = (num: number): number => {
+        return num <= 1 ? 1 : num * this.fatorial(num - 1);
+    }
+     potencia = (base: number, expoente: number): number => {
+        return Math.pow(base, expoente);
+    }
+}
+const capitulo13_exercicio6 = (): void => {
+const calculadora: Calculadora = new Calculadora()
+console.log('soma: ',calculadora.soma(1, 1))
+console.log('subtracao: ',calculadora.subtracao(1, 1))
+console.log('multiplicacao: ',calculadora.multiplicacao(2, 2))
+console.log('divisão: ',calculadora.divisao(2, 2))
+console.log('raiz quadrada: ',calculadora.raizQuadrada(4))
+console.log('resto divisão: ',calculadora.restoDivisao(3,2))
+console.log('porcentagem: ',calculadora.porcentagem(25,50))
+console.log('fatorial: ',calculadora.fatorial(5))
+console.log('potencia: ',calculadora.potencia(2, 3))
+}
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const main = (): void => {
 
@@ -1418,10 +1474,11 @@ const main = (): void => {
   // cliente1.capitulo13_exercicio2(200)
   // cliente1.capitulo13_exercicio2(100)
   // cliente1.capitulo13_exercicio2(400)
-  //capitulo13_exercicio3()
-  //capitulo13_exercicio4()
-  const cliente1 = new Cliente1("João", "jão123@gmail.com", 28, 500.0)
-   cliente1.capitulo13_exercicio5(200)
+  // capitulo13_exercicio3()
+  // capitulo13_exercicio4()
+  // const cliente1 = new Cliente1("João", "jão123@gmail.com", 28, 500.0)
+  // cliente1.capitulo13_exercicio5(200)
+  // capitulo13_exercicio6()
 
 }
 main()
