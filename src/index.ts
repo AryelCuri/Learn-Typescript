@@ -1276,6 +1276,35 @@ console.log('fatorial: ',calculadora.fatorial(5))
 console.log('potencia: ',calculadora.potencia(2, 3))
 }
 
+
+interface Voo {
+  voar(): void
+}
+
+interface Nadar {
+  nadar(): void
+}
+
+class Pato implements Voo {
+  voar() {
+      console.log("Pato voa!")
+  }
+}
+
+class Peixe implements Nadar {
+  nadar() {
+      console.log("Peixe nada!")
+  }
+}
+const capitulo13_exercicio7= (): void => {
+
+const pato = new Pato()
+pato.voar()
+
+const peixe = new Peixe()
+peixe.nadar()
+}
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const main = (): void => {
 
@@ -1479,6 +1508,7 @@ const main = (): void => {
   // const cliente1 = new Cliente1("João", "jão123@gmail.com", 28, 500.0)
   // cliente1.capitulo13_exercicio5(200)
   // capitulo13_exercicio6()
+  // capitulo13_exercicio7()
 
 }
 main()
