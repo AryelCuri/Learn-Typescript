@@ -1340,6 +1340,25 @@ const meuCarro: Carro = {
 console.log("Meu carro:", meuCarro)
 }
 
+interface Dicionario {
+  [key: string]: string
+}
+const dicionario = {
+  catual: 'juiz criminal ou governador da cidade.',
+  cadeira: 'Assento dotado de encosto, geralmente com quatro pernas, com ou sem braços, para uma só pessoa.',
+  aselho: 'Pequeno crustáceo isópode de água doce.',
+  ftalato: 'sal do ácido ftálico',
+  praca: 'Lugar largo e espaçoso, ordinariamente rodeado de edifícios.'
+}
+
+const capitulo13_exercicio9 = (): void => {
+console.log(dicionario['catual'])
+const dicionario_daora: Dicionario = dicionario
+Object.keys(dicionario_daora).forEach((palavra: string) => {
+  console.log(`${palavra}: ${dicionario_daora[palavra]}`)
+})
+}
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const main = (): void => {
 
@@ -1541,10 +1560,11 @@ const main = (): void => {
   // capitulo13_exercicio3()
   // capitulo13_exercicio4()
   // const cliente1 = new Cliente1("João", "jão123@gmail.com", 28, 500.0)
-   cliente1.capitulo13_exercicio5(200)
+  // cliente1.capitulo13_exercicio5(200)
   // capitulo13_exercicio6()
   // capitulo13_exercicio7()
   // capitulo13_exercicio8()
+  // capitulo13_exercicio9()
 
 }
 main()
