@@ -1106,7 +1106,249 @@ const capitulo10_exercicio14 = (lado1: number, lado2: number, lado3: number): vo
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+class Pessoa {
+  nome: string
+  idade: number
+  constructor(nome: string, idade: number) {
+    this.nome = nome
+    this.idade = idade
+  }
+  imprimirDetalhes(): void {
+    console.log(`Nome: ${this.nome}, Idade: ${this.idade}`)
+  }
+}
 
+const capitulo12_exercicio1 = (): void => {
+    console.log('12.1 Fácil: Criando uma Classe Básica. Crie uma classe simples chamada Pessoa com propriedades como nome, idade, e um método para imprimir os detalhes da pessoa.')
+const pessoa1 = new Pessoa("Fulano", 25)
+pessoa1.imprimirDetalhes()
+}
+
+class Pessoaa {
+  constructor(public nome: string, public idade: number) {}
+
+  imprimirDetalhes(): void {
+    console.log(`Nome: ${this.nome}, Idade: ${this.idade}`)
+  }
+
+  aumentarIdade(anos: number): void {
+    this.idade += anos
+  }
+
+  alterarNome(novoNome: string): void {
+    this.nome = novoNome
+  }
+}
+const capitulo12_exercicio2 = (): void => {
+  console.log('12.2 Fácil: Adicionando Métodos. Expanda a classe Pessoa adicionando métodos para aumentar a idade da pessoa e alterar onome.')
+const pessoa1 = new Pessoaa('Jão1', 25)
+pessoa1.imprimirDetalhes()
+pessoa1.aumentarIdade(3)
+pessoa1.alterarNome('Jão2')
+pessoa1.imprimirDetalhes()
+}
+
+class Pessoaaa {
+  constructor(public nome: string, public idade: number) {}
+
+  informacoes(): void {
+    console.log(`Nome: ${this.nome}, Idade: ${this.idade}`)
+  }
+}
+
+class Aluno extends Pessoaaa {
+  constructor(nome: string, idade: number, public matricula: number) {
+    super(nome, idade)
+  }
+
+  informacoes(): void {
+    super.informacoes()
+    console.log(`Matrícula: ${this.matricula}`)
+  }
+
+  estudar(): void {
+    console.log(`${this.nome} está estudando.`)
+  }
+}
+const capitulo12_exercicio3 = (): void => {
+  console.log('12.3 Fácil: Herança. Crie uma classe Aluno que herde da classe Pessoa. Adicione propriedades específicas do aluno,como matricula e métodos relacionados.')
+const aluno1 = new Aluno("João", 20, 12345)
+aluno1.informacoes()
+aluno1.estudar()
+}
+
+class Pessoaaaaa {
+  nome: string
+  idade: number
+
+  constructor(nome: string, idade: number) {
+    this.nome = nome
+    this.idade = idade
+  }
+
+  exibirInformacoes(): void {
+    console.log(`Nome: ${this.nome}, Idade: ${this.idade}`)
+  }
+}
+
+class Alunoo extends Pessoaaaaa {
+  matricula: number
+
+  constructor(nome: string, idade: number, matricula: number) {
+    super(nome, idade)
+    this.matricula = matricula
+  }
+
+  exibirInformacoes(): void {
+    super.exibirInformacoes()
+    console.log(`Matricula: ${this.matricula}`)
+  }
+
+  estudar(): void {
+    console.log(`${this.nome} está estudando.`)
+  }
+}
+
+const capitulo12_exercicio4 = (): void => {
+  console.log('12.4 Fácil: Sobrescrita de Método. Na classe Aluno, sobrescreva o método de impressão da classe Pessoa para incluir informações específicas do aluno.')
+const aluno1 = new Alunoo("João", 20, 12345)
+aluno1.exibirInformacoes()
+aluno1.estudar()
+}
+
+class Pessoaaaaaa {
+  private _nome: string;
+  private _idade: number;
+
+  constructor(nome: string, idade: number) {
+    this._nome = nome
+    this._idade = idade
+  }
+
+  get nome(): string {
+    return this._nome
+  }
+
+  set nome(novoNome: string) {
+    this._nome = novoNome
+  }
+
+  get idade(): number {
+    return this._idade
+  }
+
+  set idade(novaIdade: number) {
+    this._idade = novaIdade
+  }
+
+  exibirInformacoes(): void {
+    console.log(`Nome: ${this._nome}, Idade: ${this._idade}`)
+  }
+}
+const capitulo12_exercicio5 = (): void => {
+  console.log('12.5 Fácil: Encapsulamento. Modifique a classe Pessoa para tornar suas propriedades privadas e adicione métodos de acesso(getters e setters).')
+const pessoa1 = new Pessoaaaaaa("Maria", 25)
+console.log(pessoa1.nome)
+console.log(pessoa1.idade)
+
+pessoa1.nome = "Ana"
+pessoa1.idade = 30
+
+pessoa1.exibirInformacoes()
+}
+interface OperacoesMatematica {
+  soma( num: number, num1: number): number
+  subtracao(num: number, num1: number): number
+  multiplicacao(num: number, num1: number): number
+  divisao(num: number, num1: number): number
+}
+class Calculadora1 implements OperacoesMatematica { 
+    soma = (num: number, num1: number): number => {
+      return num + num1
+    }
+    subtracao = (num: number, num1: number): number => {
+      return num - num1
+    }
+    multiplicacao = (num: number, num1: number): number => {
+      return num * num1  
+    }
+    divisao = (num: number, num1: number): number => {
+      return num/num1
+    }
+}
+const capitulo12_exercicio6 = (): void => {
+  console.log('12.6 Moderado: Classes Estáticas. Crie uma classe estática Calculadora com métodos estáticos para realizar operações matemáticas simples, como adição, subtração, multiplicação e divisão')
+const calculadora1: Calculadora1 = new Calculadora1()
+console.log('soma: ',calculadora1.soma(1, 1))
+console.log('subtracao: ',calculadora1.subtracao(1, 1))
+console.log('multiplicacao: ',calculadora1.multiplicacao(2, 2))
+console.log('divisão: ',calculadora1.divisao(2, 2))
+}
+
+class Endereco {
+  constructor(
+      public rua: string,
+      public cidade: string,
+      public estado: string,
+      public cep: string
+  ) {}
+
+  imprimirDetalhesEndereco(): void {
+      console.log(`Endereço: ${this.rua}, ${this.cidade}, ${this.estado}, CEP: ${this.cep}`);
+  }
+}
+
+class Pessoaaaa {
+  constructor(
+      public nome: string,
+      public idade: number,
+      public endereco: Endereco
+  ) {}
+
+  imprimirDetalhesPessoa(): void {
+      console.log(`Nome: ${this.nome}, Idade: ${this.idade}`);
+      this.endereco.imprimirDetalhesEndereco();
+  }
+}
+const capitulo12_exercicio7 = (): void => {
+console.log('12.7 Moderado: Composição. Crie uma classe Endereco e uma classe Pessoa que possui uma instância da classe Endereco. Adicione métodos para imprimir os detalhes da pessoa e do endereço.')
+const endereco = new Endereco('Rua Principal', 'Cidade Exemplo', 'Estado Exemplo', '12345-678');
+const pessoa = new Pessoaaaa('João', 30, endereco);
+
+pessoa.imprimirDetalhesPessoa();
+}
+
+interface Veiculo {
+  modelo: string
+  ano: number
+}
+
+class Carro implements Veiculo {
+  constructor(
+      public modelo: string,
+      public ano: number,
+      public marca: string,
+      public cor: string
+  ) {}
+}
+
+class Moto implements Veiculo {
+  constructor(
+      public modelo: string,
+      public ano: number,
+      public marca: string,
+      public cilindradas: number
+  ) {}
+}
+const capitulo12_exercicio8 = (): void => {
+  console.log('12.8 Moderado: Interface. Defina uma interface Veiculo com propriedades comuns a veículos (por exemplo, modelo, ano) eimplemente essa interface em classes como Carro e Moto.')
+const carro = new Carro('Fusca', 1972, 'Volkswagen', 'Azul')
+const moto = new Moto('CG 125', 2005, 'Honda', 125)
+
+console.log(carro)
+console.log(moto)
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const capitulo13_exercicio1 = (): void => {
   console.log('13.1 Fácil: Criando uma Interface Simples   Crie uma interface chamada Usuario com propriedades como nome, email e idade.')
   interface Usuario {
@@ -1380,6 +1622,7 @@ class Produto implements IProduto {
  readonly preco = 100
 }
 const capitulo13_exercicio10= (): void => {
+  console.log('13.10 Moderado: Readonly Properties. Adicione propriedades readonly à interface Produto para representar informações que não devem ser modificadas após a criação do objeto.')
 const produto: Produto = new Produto()
 console.log(produto.nome, produto.preco)
 }
@@ -1503,7 +1746,7 @@ const main = (): void => {
   // console.log(novo_evento)
   
 
-  //   capitulo8_exercicio7()
+     //capitulo8_exercicio7()
   //   let transacao1: Transacao_banc = {
   //     tipo: 'Retirada de Dinheiro',
   //     valor: 'R$20.00',
@@ -1566,6 +1809,24 @@ const main = (): void => {
   // capitulo10_exercicio12('Leyra123@')
   // capitulo10_exercicio13('asa')
   // capitulo10_exercicio14(5, 6, 7)
+
+
+
+
+
+
+  capitulo12_exercicio1()
+  capitulo12_exercicio2()
+  capitulo12_exercicio3()
+  capitulo12_exercicio4()
+  capitulo12_exercicio5()
+  capitulo12_exercicio6()
+  capitulo12_exercicio7()
+  capitulo12_exercicio8()
+
+
+
+
 
 
   // capitulo13_exercicio1()
