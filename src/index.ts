@@ -1627,6 +1627,102 @@ const produto: Produto = new Produto()
 console.log(produto.nome, produto.preco)
 }
 
+interface ComponenteVisual{
+  definecor(cor: string): void
+  definetamanho(altura: number, largura: number): void
+}
+
+class Butao implements ComponenteVisual{
+  cor: string = ''
+  altura: number = 0
+  largura: number = 0
+
+  definecor = (cor: string) => {
+      this.cor = cor
+  }
+
+  definetamanho = (altura: number, largura: number) => {
+      this.altura = altura
+      this.largura= largura
+  }
+  
+  constructor(altura: number, largura: number, cor: string) {
+      this.altura = altura
+      this.largura = largura
+      this.cor = cor
+  }
+}
+
+class CaixaTexto implements ComponenteVisual{
+  cor: string = ''
+  altura: number = 0
+  largura: number = 0
+
+  definecor = (cor: string) => {
+      this.cor = cor
+  }
+
+  definetamanho = (altura: number, largura: number) => {
+      this.altura = altura
+      this.largura= largura
+  }
+  
+  constructor(altura: number, largura: number, cor: string) {
+      this.altura = altura
+      this.largura = largura
+      this.cor = cor
+  }
+}
+const capitulo13_exercicio11 = () =>{
+  const botao = new Butao(1, 2, 'laranga')
+  botao.definetamanho(7, 7)
+  botao.definecor('azulanga')
+  console.log('butão: ',botao.cor, botao.largura, botao.altura)
+  const caixaTexto = new CaixaTexto(1, 2, 'zul')
+  caixaTexto.definetamanho(3, 8)
+  caixaTexto.definecor('branca')
+  console.log('caixinha de texto: ',caixaTexto.cor, caixaTexto.largura, caixaTexto.altura)
+}
+interface Envio{
+  dataEntrega: Date
+  nomePessoaEnvio: string
+  localEntrega: string
+}
+interface Rastreio{
+  codigoRastreio: string
+  localizacao: string
+  status: Status
+}
+enum Status{
+      Em_Transito,
+      Aguardando_Retirada,
+      Entregue
+  }
+interface Pacote extends Envio, Rastreio {
+  peso: number
+  altura: number
+  largura: number
+  comprimento: number
+  descricao: string
+}
+const capitulo13_exercicio12 = (): void => {
+const pacote: Pacote = {
+  altura: 7,
+  largura: 4,
+  comprimento: 5,
+  dataEntrega: new Date(2024, 5, 1),
+  codigoRastreio: '7Xf24BR',
+  peso: 84,
+  descricao: 'esse produto é daora',
+  status: Status.Aguardando_Retirada,
+  localizacao: 'Paraguai',
+  localEntrega: 'Canada',
+  nomePessoaEnvio: 'Ratinho Jr.'
+
+}
+console.log(pacote)
+}
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const main = (): void => {
 
@@ -1815,14 +1911,14 @@ const main = (): void => {
 
 
 
-  capitulo12_exercicio1()
-  capitulo12_exercicio2()
-  capitulo12_exercicio3()
-  capitulo12_exercicio4()
-  capitulo12_exercicio5()
-  capitulo12_exercicio6()
-  capitulo12_exercicio7()
-  capitulo12_exercicio8()
+  // capitulo12_exercicio1()
+  // capitulo12_exercicio2()
+  // capitulo12_exercicio3()
+  // capitulo12_exercicio4()
+  // capitulo12_exercicio5()
+  // capitulo12_exercicio6()
+  // capitulo12_exercicio7()
+  // capitulo12_exercicio8()
 
 
 
@@ -1843,6 +1939,8 @@ const main = (): void => {
   // capitulo13_exercicio8()
   // capitulo13_exercicio9()
   // capitulo13_exercicio10()
+  // capitulo13_exercicio11()
+  // capitulo13_exercicio12()
 
 }
 main()
