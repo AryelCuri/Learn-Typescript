@@ -1722,6 +1722,40 @@ const pacote: Pacote = {
 }
 console.log(pacote)
 }
+interface Usuario1 {
+  idadeUs: number
+  nomeUs: string
+  emailUs: string
+  senhaUs: string
+}
+interface Produto1 {
+  nomeProduto: string
+  precoProduto: number
+  qntdEstoque: number
+}
+function inserirUsuario(usuario: Usuario1){
+  console.log(`inserindo ${usuario.nomeUs} no banco de dados`)
+}
+function atualizarProduto(produto: Produto1){
+  console.log(`atualizando o produto: ${produto.nomeProduto} no banco de dados`)
+}
+const capitulo13_exercicio14 = (): void => {
+  const usuario1: Usuario1 = {
+      idadeUs: 18,
+      nomeUs: "Jorge",
+      emailUs: "Jorgin123@gmail.com",
+      senhaUs: "@j0Rg3"
+  }
+  inserirUsuario(usuario1)
+
+
+  const produto1: Produto1 = {
+      nomeProduto: "caixa",
+      precoProduto: 5.00,
+      qntdEstoque: 12
+  }
+  atualizarProduto(produto1)
+}
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const main = (): void => {
@@ -1941,6 +1975,6 @@ const main = (): void => {
   // capitulo13_exercicio10()
   // capitulo13_exercicio11()
   // capitulo13_exercicio12()
-
+  capitulo13_exercicio14
 }
 main()
