@@ -1975,6 +1975,7 @@ const main = (): void => {
   // capitulo13_exercicio10()
   // capitulo13_exercicio11()
   // capitulo13_exercicio12()
-  capitulo13_exercicio14
+  // capitulo13_exercicio14()
+
 }
 main()
