@@ -4,6 +4,7 @@ import Capitulo3 from './capitulo3/index';
 import Capitulo4, { Resultado } from './capitulo4/index';
 import Capitulo5 from './capitulo5/index';
 import Capitulo6 from './capitulo6/index';
+import Capitulo7, { Livro } from './capitulo7/index';
 
 
 
@@ -14,131 +15,6 @@ import Capitulo6 from './capitulo6/index';
 //-------------------------------------------------------------------------------------------------------------------------------
 
 
-const capitulo7_exercicio1 = (): void => {
-  console.log('Capítulo 7.1 Fácil: Declare um tipo que represente um endereço, contendo rua, cidade e código postal')
-  type Endereco = {
-      rua: string
-      cidade: string
-      codigoPostal: number
-  }
-  
-}
-
-const capitulo7_exercicio2 = (): void => {
-  console.log('Capítulo 7.1 Fácil: Declare um tipo que represente um endereço, contendo rua, cidade e código postal')
-  type Endereco = {
-      rua: string
-      cidade: string
-      codigoPostal: number
-  }
-  const enderecoaleatorio: Endereco = {
-      rua: 'Souza Naves',
-      cidade: 'Cascavel',
-      codigoPostal: 85800-0o0
-  }
-  console.log(enderecoaleatorio)
-}
-
-const capitulo7_exercicio3 = (): void => {
-  console.log('Capítulo 7.3 Fácil: Defina um tipo para representar um livro, com título, autor e ano de publicação')
-  type Livro = {
- titulo: string;
- autor: string;
- anoPublicacao: number;
-  }
-}
-
-type Livro = {
-  titulo: string;
-  autor: string;
-  anoPublicacao: number;
-   }
- const capitulo7_exercicio4 = (livros: Livro[]): void => {
-   console.log('Capítulo 7.4 Fácil: Escreva uma função que aceite um array de livros e retorne o livro mais recente');
-   let maisRecente: Livro | undefined
-   let maiorAno: number = 0
-   livros.forEach((livro: Livro) => {
-     if (livro.anoPublicacao > maiorAno) {
-       maiorAno = livro.anoPublicacao
-       maisRecente = livro
-     }
-   })
-   console.log(maisRecente)
- }
- const livros: Livro[] = [
-     {
-     titulo: 'unicornios, onde vivem?',
-     autor: 'Jeffinho',
-     anoPublicacao:2022
-     },
-     {
-     titulo: 'O Silêncio nas Estrelas',
-     autor: 'Renata Almeida',
-     anoPublicacao: 2024
-     }
- ]
-
- const capitulo7_exercicio5 = (): void => {
-  console.log('Capítulo 7.5 Moderado: Declare um tipo para representar um carro, contendo modelo, ano e um objeto de proprietario');
-    type Carro = {
-    modelo: string,
-    ano: number
-    }
-    type Proprietario = {
-        carro: Carro,
-        nomemotorista: string
-    }
-    const proprietario: Proprietario = {
-        carro: {
-            ano: 2001,
-            modelo: 'arco-íris'
-        },
-        nomemotorista: 'jeffin'
-    }
-    console.log(proprietario)
-}
-
-const capitulo7_exercicio6 = (): void => {
-  console.log('Capítulo 7.5 Moderado: Declare um tipo para representar um carro, contendo modelo, ano e um objeto de proprietario');
-    type Carro = {
-    modelo: string,
-    ano: number
-    }
-    type Proprietario = {
-        carro: Carro,
-        nomemotorista: string
-    }
-    const proprietario: Proprietario = {
-        carro: {
-            ano: 2001,
-            modelo: 'arco-íris'
-        },
-        nomemotorista: 'jeffin'
-    }
-    console.log(proprietario)
-}
-
-const capitulo7_exercicio7 = (): void => {
-  console.log('Capítulo 7.7 Moderado: Defina um tipo para representar um curso, com nome, instrutor e um array de alunos');
-    type Curso = {
-        nome: string,
-        instrutor: string
-        arrayAlunos: string[]
-    }
-}
-
-type Curso = {
-  nome: string,
-  instrutor: string
-  arrayAlunos: string[]
-  notasAlunos: number[]
-}
-
-const capitulo7_exercicio8 = (curso: Curso): void => {
-console.log('Capítulo 7.7 Moderado: Defina um tipo para representar um curso, com nome, instrutor e um array de alunos');
-let notaAlta: number = Math.max(...curso.notasAlunos)
-console.log(notaAlta)
-}
 
 
 //-----------------------------------------------------------------------------------------------------------------
@@ -1343,21 +1219,27 @@ const main = (): void => {
 
 
 
-
-  // capitulo7_exercicio1()
-  // capitulo7_exercicio2()
-  // capitulo7_exercicio3()
-  // capitulo7_exercicio4(livros)
-  // capitulo7_exercicio5()
-  // capitulo7_exercicio6()
-  // capitulo7_exercicio7()
-  // let curso1: Curso = {
-  //   nome: 'cursoBrabo',
-  //   instrutor: 'jeff',
-  //   arrayAlunos: ['aryel', 'jorgin', 'joaozin'],
-  //   notasAlunos: [6, 8, 7.5]
-  // }
-  //  capitulo7_exercicio8(curso1)
+const capitulo7: Capitulo7 = new Capitulo7()
+  capitulo7.exercicio1()
+  capitulo7.exercicio2()
+  capitulo7.exercicio3()
+  const livros: Livro[] = [
+    {
+    titulo: 'unicornios, onde vivem?',
+    autor: 'Jeffinho',
+    anoPublicacao:2022
+    },
+    {
+    titulo: 'O Silêncio nas Estrelas',
+    autor: 'Renata Almeida',
+    anoPublicacao: 2024
+    }
+]
+  capitulo7.exercicio4(livros)
+  capitulo7.exercicio5()
+  capitulo7.exercicio6()
+  capitulo7.exercicio7()
+   capitulo7.exercicio8(curso1)
 
 
   // capitulo8_exercicio1()
