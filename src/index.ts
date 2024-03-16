@@ -6,7 +6,7 @@ import Capitulo5 from './capitulo5/index';
 import Capitulo6 from './capitulo6/index';
 import Capitulo7, { Curso, Livro } from './capitulo7/index';
 import Capitulo8, { Evento, ProdutoEx3, TProdutoCapitulo8Ex4, transacao_banc } from './capitulo8/index';
-
+import Capitulo9 from './capitulo9/index';
 
 
 //-----------------------------------------------------------------------------------------------------
@@ -24,183 +24,6 @@ import Capitulo8, { Evento, ProdutoEx3, TProdutoCapitulo8Ex4, transacao_banc } f
 
 //---------------------------------------------------------------------------------------------------------------------------
 
-const capitulo9_exercicio1 = (): void =>{
-  console.log('capitulo 9.1 Fácil: Crie um loop que imprima os números de 1 a 10.')
-  let i: number = 1
-  while(i <= 10){
-    console.log(i)
-    i = i+1
-  }
-}
-
-const capitulo9_exercicio2 =(): void =>{
-  console.log('capitulo 9.2 Fácil: Implemente um loop que calcule a soma dos números de 1 a 50.')
-  let i: number = 1
-  let soma: number= 0
-  while(i<=50){
-    soma = soma + i
-    console.log(soma)
-    i += 1
-  }
-}
-const capitulo9_exercicio3 = (): void =>{
-  console.log('capitulo 9.3 Fácil: Escreva um loop que imprima os números pares de 2 a 20')
-    let i: number = 2
-    while(i <= 20){
-      console.log(i)
-      i += 2
-    }
-}
-const capitulo9_exercicio4 =(): void => {
-  console.log('capitulo 9.4 Fácil: Desenvolva um loop que preencha um array com os quadrados dos números de 1 a 5')
-  const quadrados: number[] = []
-  let i: number =1
-  while(i <= 5){
-    quadrados.push(Math.pow(i,2))
-    i++
-  }
-    console.log(quadrados.join())
-}
-
-const capitulo9_exercicio5 =(nomedaoraarray: string[] =[]): void => {
-  console.log('capitulo 9.5 Fácil: Crie um loop que itere sobre um array de strings e imprima cada uma.')
-  nomedaoraarray.forEach((valor: string) =>{
-      console.log(valor)
-  })
-}
-
-const capitulo9_exercicio6 =(): void => {
-  console.log('capitulo 9.6 Moderado: Implemente um loop que calcule o produto dos números de 1 a 10')
-    let i: number = 1
-    let produto: number =1
-    while(i <=10){
-      produto = produto*i
-      console.log(produto)
-      i = i+1
-    }
-
-}
-
-const capitulo9_exercicio7 = (array: number[] =[]): void => {
-  console.log('capitulo 9.7 Moderado: Escreva um loop que inverta um array de números')
-
-  const invertido: number[] = []
-  array.forEach((valor: number) => {
-    invertido.unshift(valor)
-    
-  })
-  console.log(invertido)
-}
-
-const capitulo9_exercicio8 = (num: number): boolean => {
-  if (num < 2) return false;
-  for (let i = 2; i <= Math.sqrt(num); i++)
-      if (num % i === 0) return false;
-  return true;
-}
-
-function encontrarPrimoProximo(alvo: number): number {
-  let anterior = alvo - 1;
-  let seguinte = alvo + 1;
-
-  while (!capitulo9_exercicio8(anterior) && !capitulo9_exercicio8(seguinte)) {
-      anterior--;
-      seguinte++;
-  }
-
-  return capitulo9_exercicio8(anterior) ? anterior : seguinte;
-}
-
-const capitulo9_exercicio9 = (maximo: number): void => {
-  console.log('capitulo 9.9 Moderado: Crie um loop que imprima os números de Fibonacci até o décimo termo')
-  const arrray: number[] = [1,1]
-  
-  for(let i = 0; i <= maximo; i++){
-      console.log(arrray)
-      if(i > 1){
-          arrray.push(arrray[i - 1] + arrray[i - 2])
-      }
-  }
-}
-
-const capitulo9_exercicio10 = (): void => {
-  console.log('ca9.10 Moderado: Implemente um loop que preencha um array com os números quadrados perfeitos até 100')
-    const quadrados: number[] = []
-    let i: number = 1
-    while(i <= 10){
-      quadrados.push(Math.pow(i,2))
-      i++
-      
-    }
-    console.log(quadrados)
-  
-  }
-
-  const capitulo9_exercicio11 = (frase: string): void => {
-    console.log('Capítulo 9.11 Difícil: Desenvolva um loop que inverta cada palavra em uma frase')
-    let array: string[] = frase.split(' ')
-    let array2: string[] = []
-    array.forEach((valor: string) => {
-        array2.push(valor.split('').reverse().join(''))
-    })
-    console.log(array2.reverse().join(' '))
-  }
-
-  const capitulo9_exercicio12 = (): void => {
-    console.log('capitulo 9.12 Difícil: Implemente um loop que calcule a raiz quadrada dos números de 1 a 10')
-    let i: number =1
-    let raiz: number 
-    while(i < 11){
-        raiz = Math.sqrt(i)
-        console.log(raiz)
-        i++
-    }
-}
-
-const capitulo9_exercicio13 = (num: number): boolean => {
-  if (num < 2) return false;
-  for (let i = 2; i <= Math.sqrt(num); i++)
-      if (num % i === 0) return false;
-  return true;
-}
-
-function encontrarPrimoProximod(alvo: number): number {
-  let anterior = alvo - 1;
-  let seguinte = alvo + 1;
-
-  while (!capitulo9_exercicio13(anterior) && !capitulo9_exercicio13(seguinte)) {
-      anterior--;
-      seguinte++;
-  }
-
-  return capitulo9_exercicio13(anterior) ? anterior : seguinte;
-}
-
-const capitulo9_exercicio14 = (): void => {
-  console.log('Capítulo 9.14 Difícil: Crie um loop que imprima os números palíndromos de 1 a 100')
-  let i1= 1
-  let i2 = 11
-    while(i1 < 10){
-        console.log(i1)
-        i1++
-    }
-    while(i2 < 100){
-        console.log(i2)
-        i2 = i2 + 11
-    }
-}
-
-const capitulo9_exercicio15 = (maximo: number): void => {
-  console.log('capitulo 9.15 Difícil: Desenvolva um loop que calcule a sequência de Fibonacci até o vigésimo termo.')
-  const arrray: number[] = [1,1]
-  
-  for(let i = 0; i <= maximo; i++){
-      console.log(arrray)
-      if(i > 1){
-          arrray.push(arrray[i - 1] + arrray[i - 2])
-      }
-  }
-}
 
 //-----------------------------------------------------------------------------------------------------
 
@@ -1195,31 +1018,31 @@ const capitulo7: Capitulo7 = new Capitulo7()
 
 
 
+  const capitulo9: Capitulo9 = new Capitulo9()
+  capitulo9.exercicio1()
+  capitulo9.exercicio2()
+  capitulo9.exercicio3()
+  capitulo9.exercicio4()
+  capitulo9.exercicio5(['abc', 'dfg', 'hij'])
+  capitulo9.exercicio6()
+  capitulo9.exercicio7([1, 2, 3, 4, 5])
 
-  // capitulo9_exercicio1()
-  // capitulo9_exercicio2()
-  // capitulo9_exercicio3()
-  // capitulo9_exercicio4()
-  // capitulo9_exercicio5(['abc', 'dfg', 'hij'])
-  // capitulo9_exercicio6()
-  // capitulo9_exercicio7([1, 2, 3, 4, 5])
+  console.log('capitulo 9.8 Moderado: Desenvolva um loop que encontre o número primo mais próximo de 100') // exercicio 8
+  let numeroAlvo = 100;
+  let primoMaisProximo = capitulo9.encontrarPrimoProximo(numeroAlvo)
+  console.log(`Alvo: ${numeroAlvo}, mais proximo é: ${primoMaisProximo}.`)
 
-  // console.log('capitulo 9.8 Moderado: Desenvolva um loop que encontre o número primo mais próximo de 100') // exercicio 8
-  // const numeroAlvo = 100;
-  // const primoMaisProximo = encontrarPrimoProximo(numeroAlvo)
-  // console.log(`Alvo: ${numeroAlvo}, mais proximo é: ${primoMaisProximo}.`)
+  capitulo9.exercicio9(10)
+  capitulo9.exercicio10()
+  capitulo9.exercicio11('asd dsa asd')
+  capitulo9.exercicio12()
+  console.log('capitulo 9.13 Difícil: Escreva um loop que encontre o maior número primo menor que 1000')
+  numeroAlvo = 1000
+   primoMaisProximo = capitulo9.encontrarPrimoProximod(numeroAlvo)
+  console.log(`Maior primo menos que ${numeroAlvo}: ${primoMaisProximo}.`)
 
-  // capitulo9_exercicio9(10)
-  // capitulo9_exercicio10()
-  // capitulo9_exercicio11('asd dsa asd')
-  // capitulo9_exercicio12()
-  // console.log('capitulo 9.13 Difícil: Escreva um loop que encontre o maior número primo menor que 1000')
-  // const numeroAlvo = 1000
-  // const primoMaisProximo = encontrarPrimoProximod(numeroAlvo)
-  // console.log(`Maior primo menos que ${numeroAlvo}: ${primoMaisProximo}.`)
-
-  // capitulo9_exercicio14()
-  // capitulo9_exercicio15(20)
+  capitulo9.exercicio14()
+  capitulo9.exercicio15(20)
 
   
 
