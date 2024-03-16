@@ -1,20 +1,7 @@
 import Capitulo1 from './capitulo1/index';
 import Capitulo2 from './capitulo2';
 import Capitulo3 from './capitulo3';
-
-//-----------------------------------------------------------------------------------------------------
-
-
-
-//-----------------------------------------------------------------------------------------------------
-
-
-
-//-----------------------------------------------------------------------------------------------------
-
-
-
-//-----------------------------------------------------------------------------------------------------
+import Capitulo4, { Resultado } from './capitulo4';
 
 
 const capitulo5_exercicio1 = (): void => {
@@ -1498,18 +1485,18 @@ const main = (): void => {
 
 
 
-
-  // capitulo4_exercicio1(12, 2)
-  // capitulo4_exercicio2(1)
-  // capitulo4_exercicio3(5)
-  // capitulo4_exercicio4([1, 7, 9, 12])
-  // capitulo4_exercicio5('hexagono')
-  // capitulo4_exercicio6('a torre da derrota')
-  // capitulo4_exercicio7(['a', 'adfs', 'asr'])
-  //  const array: number[] = [1, 2, 3,4,5,6,7,8,9,10]
-  //  const alvo: number = 7
-  //  const resultado: Resultado = capitulo4_exercicio8(alvo, array)
-  //  console.log(resultado)
+  const capitulo4: Capitulo4 = new Capitulo4()
+ capitulo4.exercicio1(12, 2)
+ capitulo4.exercicio2(1)
+ capitulo4.exercicio3(5)
+ capitulo4.exercicio4([1, 7, 9, 12])
+ capitulo4.exercicio5('hexagono')
+ capitulo4.exercicio6('a torre da derrota')
+ capitulo4.exercicio7(['a', 'adfs', 'asr'])
+   const array: number[] = [1, 2, 3,4,5,6,7,8,9,10]
+   const alvo: number = 7
+   const resultado: Resultado =capitulo4.exercicio8(alvo, array)
+   console.log(resultado)
 
 
 
