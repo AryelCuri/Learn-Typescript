@@ -1,145 +1,9 @@
-const capitulo1_exercicio1 = (): void => {
-  console.log('capitulo 1.1 facil Crie uma função que imprima "Olá, mundo!" no console')
-  console.log('Ola, Mundo!')
-
-
-}
-const capitulo1_exercicio2 = (param: string): void => {
-  console.log('capitulo1.2 facil Escreva uma função que aceite um parâmetro e o imprima no console.')
-  console.log(param)
-
-}
-const capitulo1_exercicio3 = (num1: number, num2: number): void => {
-  console.log('capitulo 1.3 Fácil: Implemente uma função que calcule a soma de dois números e a imprima')
-  console.log(num1 + num2)
-}
-const capitulo1_exercicio4 = (palavra: string): void => {
-  console.log('capitulo 1.4 Fácil: Crie uma função que receba uma string e a imprima invertida no console.')
-  console.log(palavra.split('').reverse().join().replaceAll(',', ''))
-}
-
-const capitulo1_exercicio5 = (min: number, max: number): number => {
-  console.log('capitulo 1.5 Moderado: Escreva uma função que gere um número aleatório entre 1 e 100 e o imprima')
-  return Math.floor(Math.random() * (max-min + 1) + min) 
-}
-
-const capitulo1_exercicio6 = (numero: number): void => {
-  console.log('capitulo 1.6 Moderado: Implemente uma função que verifique se um número é par ou ímpar e imprima o resultado')
-  if(numero % 2 === 0){
-
-      console.log('numero é par')
-
-  }else console.log('numero é impar')
-
-}
-
-const capitulo1_exercicio7 = (array: number[]=[]): void => {
-  console.log('capitulo 1.7 Moderado: Crie uma função que aceite um array de números e imprima a média deles')
-  let soma: number=0
-  let media: number = 0
-  array.forEach((valor: number) =>{
-      soma= soma + valor
-  })
-  
-  media = soma/array.length
-  console.log(media)
-}
-
-const capitulo1_exercicio8 = (palavra: string): void => {
-  console.log('capitulo 1.8 Difícil: Desenvolva uma função que determine se uma palavra é um palíndromo e imprima o resultado')
- 
- if(palavra.split('').reverse().join('') === palavra){
-  console.log(palavra, 'é um palíndromo')
-
- }else console.log(palavra, 'não é um palíndromo')
-}
-
-const capitulo1_exercicio9 = (maximo: number): void => {
-  console.log('capitulo 9.15 Difícil: Desenvolva um loop que calcule a sequência de Fibonacci até o vigésimo termo.')
-  const arrray: number[] = [1,1]
-  
-  for(let i = 0; i <= maximo; i++){
-      console.log(arrray)
-      if(i > 1){
-          arrray.push(arrray[i - 1] + arrray[i - 2])
-      }
-  }
-}
+import Capitulo1 from './capitulo1/index';
+import Capitulo2 from './capitulo2';
 
 //-----------------------------------------------------------------------------------------------------
 
 
-const capitulo2_exercicio1 = (): void => {
-  console.log('capitulo 2.1 Fácil: Declare uma variável do tipo string e atribua um valor a ela')
-
-  let variavel: string = 'valoraleatorio'
-  console.log(variavel)
-}
-
-const capitulo2_exercicio2 = (): void => {
-  console.log('capitulo 2.2 Fácil: Crie uma variável do tipo number e atribua um número decimal')
-
-  let variavel: number = 3.14159
-  console.log(variavel)
-}
-
-const capitulo2_exercicio3 = (): void => {
-  console.log('capitulo 2.3 Fácil: Declare uma constante do tipo booleano e atribua um valor verdadeiro')
-  let verdade = true
-  console.log(verdade)
-}
-
-const capitulo2_exercicio4 = (): void => {
-  console.log('capitulo 2.4 Fácil: Defina uma variável com um tipo explícito e atribua um valor')
-  let valor: number = 2
-  console.log(valor)
-}
-
-const capitulo2_exercicio5 = (): void => {
-  console.log('capitulo 2.5 Moderado: Declare uma variável com tipo union que aceite string ou número')
-  let x: number | string
-  x = 10
-  console.log(x)
-  x = 'abc'
-  console.log(x)
-}
-
-const capitulo2_exercicio6 = (array: string[] = []): void => {
-  console.log('capitulo 2.6 Moderado: Crie um array de strings e atribua valores a ele')
-  console.log(array)
-}
-
-const capitulo2_exercicio7 = (): void => {
-  console.log('capitulo 2.7 Moderado: Defina um objeto com tipos explícitos para suas propriedades')
-  let texto: {
-      palavras: string,
-      titulo: string,
-      qntdlinhas: number
-  }
-
-  texto = {
-      palavras: 'estou aprendendo a linguagem typescript',
-      titulo: 'typescript',
-      qntdlinhas: 1
-  }
-  
-  console.log(texto.titulo)
-  console.log(texto.palavras)
-  console.log(texto.qntdlinhas)
-}
-
-const capitulo2_exercicio8 = (): void => {
-  console.log('capitulo 2.8 Difícil: Utilize tipos condicionais para definir um tipo com base em outra variável')
-  type TetoAberto = {conversivel: true}
-  type TetoFechado = {conversivel: false}
-  const carroNovo: TetoAberto | TetoFechado = {conversivel: true}
-  console.log('carroNovo =', carroNovo)
-}
-
-const capitulo2_exercicio9 = (numero: number): number => {
-  console.log('capitulo 2.9 Difícil: Declare uma função com tipos de parâmetros e retorno explícitos')
-  return numero
-}
 
 //-----------------------------------------------------------------------------------------------------
 
@@ -1759,34 +1623,34 @@ const capitulo13_exercicio14 = (): void => {
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const main = (): void => {
-
-  // capitulo1_exercicio1()
-  // capitulo1_exercicio2('param')
-  // capitulo1_exercicio3(1, 10)
-  // capitulo1_exercicio4('palavra')
-  // console.log(capitulo1_exercicio5(1, 100))
-  // capitulo1_exercicio6(3)
-  // capitulo1_exercicio7([12, 24, 65, 4])
-  // capitulo1_exercicio8('asa')
-  // capitulo1_exercicio9(22)
-
-
-
-
-
-  // capitulo2_exercicio1()
-  // capitulo2_exercicio2()
-  // capitulo2_exercicio3()
-  // capitulo2_exercicio4()
-  // capitulo2_exercicio5()
-  // capitulo2_exercicio6(['asc'])
-  // capitulo2_exercicio7()
-  // capitulo2_exercicio8()
-  // console.log(capitulo2_exercicio9(1))
+  const capitulo1: Capitulo1 = new Capitulo1()
+  capitulo1.exercicio1()
+  capitulo1.exercicio2('param')
+  capitulo1.exercicio3(1, 10)
+  capitulo1.exercicio4('palavra')
+  console.log(capitulo1.exercicio5(1, 100))
+  capitulo1.exercicio6(3)
+  capitulo1.exercicio7([12, 24, 65, 4])
+  capitulo1.exercicio8('asa')
+  capitulo1.exercicio9(22)
 
 
 
 
+  const capitulo2: Capitulo2 = new Capitulo2()
+  capitulo2.exercicio1()
+  capitulo2.exercicio2()
+  capitulo2.exercicio3()
+  capitulo2.exercicio4()
+  capitulo2.exercicio5()
+  capitulo2.exercicio6(['asc'])
+  capitulo2.exercicio7()
+  capitulo2.exercicio8()
+  console.log(capitulo2.exercicio9(1))
+
+
+
+  
   // capitulo3_exercicio1([1, 2, 3])
   // capitulo3_exercicio2([1, 2, 3])
   // capitulo3_exercicio3([1, 1034, 3, 4, 5, 85])
