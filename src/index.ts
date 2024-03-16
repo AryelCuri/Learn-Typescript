@@ -4,7 +4,8 @@ import Capitulo3 from './capitulo3/index';
 import Capitulo4, { Resultado } from './capitulo4/index';
 import Capitulo5 from './capitulo5/index';
 import Capitulo6 from './capitulo6/index';
-import Capitulo7, { Livro } from './capitulo7/index';
+import Capitulo7, { Curso, Livro } from './capitulo7/index';
+import Capitulo8, { Evento, ProdutoEx3, TProdutoCapitulo8Ex4, transacao_banc } from './capitulo8/index';
 
 
 
@@ -19,111 +20,7 @@ import Capitulo7, { Livro } from './capitulo7/index';
 
 //-----------------------------------------------------------------------------------------------------------------
 
-const capitulo8_exercicio1 = (): void => {
-  console.log('capitulo 8.1 Fácil: Declare um tipo para representar um usuário, com nome de usuário e e-mail')
-  type Usuario = {
-    usuario: string,
-    email: string
-  }  
-}
 
-const capitulo8_exercicio2 = (): void => {
-  console.log('capitulo 8.2 Fácil: Crie uma função que combine dois objetos do tipo usuário.')
-  type Usuario = {
-    nome: string,
-    email: string
-  }
-  let usuario: Usuario = {
-    nome: 'Aryel',
-    email: 'bolinha123@gmail.com'
-}
-  console.log(`nome: ${usuario.nome} , email: ${usuario.email}`) 
-}
-
-type ProdutoEx3 = {
-  nome: string,
-  descricao: string,
-  preco: string
-}
-const capitulo8_exercicio3 = (): void => {
-console.log('capitulo 8.3 Fácil: Defina um tipo para representar um produto, com nome, preço e descrição.')
-let produto1: ProdutoEx3 = {
-  nome: '3 pinças',
-  descricao: 'esse produto é legal',
-  preco: 'R$15.00'
-   }
-   let produto2: ProdutoEx3 = {
-  nome: 'cera de depilação + fita de depilação',
-   descricao: 'esse produto é daora',
-   preco: 'R$100.00'
-   }
-   console.log(produto1, produto2)
-}
-
-type TProdutoCapitulo8Ex4 = {
-  nome: string,
-  descricao: string,
-  preco: string
-}
-const capitulo8_exercicio4 = (produto1: TProdutoCapitulo8Ex4, produto2: TProdutoCapitulo8Ex4): TProdutoCapitulo8Ex4 => {
-  console.log('capitulo 8.4 Fácil: Escreva uma função que aceite dois produtos e retorne um novo produto combinado')
-    const preco: string = 'R$' + (Number(produto1.preco.replace('R$', '')) + Number(produto2.preco.replace('R$', ''))).toString()
-  let novo_produto: TProdutoCapitulo8Ex4 = {
-
-    nome: `kit ${produto1.nome} e ${produto2.nome}`,
-    descricao: `${produto1.descricao}, ${produto2.descricao}`,
-    preco 
-  }
-    return novo_produto
-  }
-
-const capitulo8_exercicio5 = (): void => {
-    console.log('capitulo 8.5 Moderado: Declare um tipo para representar um evento, contendo título, data e um array de palestrantes')
-    
-  }
-  type Evento = {
-      titulo: string,
-      data: string|Date,
-      palestrantes: string[]
-    } 
-    
-  const capitulo8_exercicio6 = (evento1: Evento, evento2: Evento): Evento => {
-    console.log('capitulo 8.6 Moderado: Crie uma função que aceite dois eventos e retorne um novo evento combinado')
-    let array: string[] = []
-    array = array.concat(evento1.palestrantes, evento2.palestrantes)
-    let novo_evento: Evento = {
-      titulo: `${evento1.titulo} E ${evento2.titulo}`,
-      data: `datas: ${evento1.data.toLocaleString('pt-br')} E ${evento2.data.toLocaleString('pt-br')}`,
-      palestrantes: array
-    }
-    return novo_evento
-  }
-
-  type transacao_banc = {
-    tipo: string,
-    valor: string,
-    data: string|Date
-  } 
-
-const capitulo8_exercicio7 = (): void => {
-  console.log('capitulo 8.7 Moderado: Defina um tipo para representar uma transação bancária, com tipo, valor e data')
-}
-
-type Transacao_banc = {
-  tipo: string,
-  valor: string,
-  data: string|Date
-} 
-
-const capitulo8_exercicio8 = (transacao1: Transacao_banc, transacao2: Transacao_banc): Transacao_banc => {
-console.log('capitulo 8.8 Difícil: Escreva uma função que aceite duas transações bancárias e retorne um novo objeto com o saldo resultante')
-  const novo_saldo: Transacao_banc = {
-  tipo: 'Novo Saldo',
-  valor: (parseFloat(transacao2.valor.replace('R$', '')) - parseFloat(transacao1.valor.replace('R$', ''))).toFixed(2).toString(),
-  data: new Date()
-}
-return novo_saldo
-}
 
 //---------------------------------------------------------------------------------------------------------------------------
 
@@ -1239,45 +1136,62 @@ const capitulo7: Capitulo7 = new Capitulo7()
   capitulo7.exercicio5()
   capitulo7.exercicio6()
   capitulo7.exercicio7()
-   capitulo7.exercicio8(curso1)
+  const curso: Curso = {
+    nome: 'curso daora',
+    instrutor: 'Joao',
+    arrayAlunos: ['yasmin'],
+    notasAlunos: [2]
+  }
+   capitulo7.exercicio8(curso)
 
 
-  // capitulo8_exercicio1()
-  // capitulo8_exercicio2()
-  // capitulo8_exercicio3()
-  // let novo_produto: Produto = capitulo8_exercicio4(produto1, produto2)
-  // console.log(novo_produto)
+  const capitulo8: Capitulo8 = new Capitulo8()
+  capitulo8.exercicio1()
+  capitulo8.exercicio2()
+  capitulo8.exercicio3()
+  const produto1: ProdutoEx3 = {
+    nome: '3 pinças',
+    descricao: 'esse produto é legal',
+    preco: 'R$15.00'
+     }
+     const produto2: ProdutoEx3 = {
+    nome: 'cera de depilação + fita de depilação',
+     descricao: 'esse produto é daora',
+     preco: 'R$100.00'
+     }
+  const novo_produto: TProdutoCapitulo8Ex4 = capitulo8.exercicio4(produto1, produto2)
+  console.log(novo_produto)
   
-  //capitulo8_exercicio5()
-  // let evento1: Evento = {
-  //   titulo: 'Typescript',
-  //   data: new Date('2024-02-19 13:30:00'),
-  //   palestrantes: ['Jeffin', 'Jorgin']
+  capitulo8.exercicio5()
+  const evento1: Evento = {
+    titulo: 'Typescript',
+    data: new Date('2024-02-19 13:30:00'),
+    palestrantes: ['Jeffin', 'Jorgin']
 
-  // }
-  // let evento2: Evento = {
-  //   titulo: 'Códigos',
-  //   data: new Date('2024-02-24 14:30:00'),
-  //   palestrantes: ['Joao', 'Pedro']
-  // }
-  // const novo_evento: Evento = capitulo8_exercicio6(evento1, evento2)
-  // console.log(novo_evento)
+  }
+  const evento2: Evento = {
+    titulo: 'Códigos',
+    data: new Date('2024-02-24 14:30:00'),
+    palestrantes: ['Joao', 'Pedro']
+  }
+  const novo_evento: Evento = capitulo8.exercicio6(evento1, evento2)
+  console.log(novo_evento)
   
 
-     //capitulo8_exercicio7()
-  //   let transacao1: Transacao_banc = {
-  //     tipo: 'Retirada de Dinheiro',
-  //     valor: 'R$20.00',
-  //     data: new Date('2024-02-19 13:30:00')
-  // } 
+     capitulo8.exercicio7()
+    const transacao1: transacao_banc = {
+      tipo: 'Retirada de Dinheiro',
+      valor: 'R$20.00',
+      data: new Date('2024-02-19 13:30:00')
+  } 
 
-  //   let transacao2: Transacao_banc = {
-  //     tipo: 'Depósito em Dinheiro',
-  //     valor: 'R$40.00',
-  //     data: new Date('2024-02-19 14:30:00')
-  // } 
-  // const novoSaldo = capitulo8_exercicio8(transacao1, transacao2)
-  // console.log(novoSaldo)
+    const transacao2: transacao_banc = {
+      tipo: 'Depósito em Dinheiro',
+      valor: 'R$40.00',
+      data: new Date('2024-02-19 14:30:00')
+  } 
+  const novoSaldo = capitulo8.exercicio8(transacao1, transacao2)
+  console.log(novoSaldo)
 
 
 
