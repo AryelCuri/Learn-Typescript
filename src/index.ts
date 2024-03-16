@@ -1,5 +1,6 @@
 import Capitulo1 from './capitulo1/index';
 import Capitulo2 from './capitulo2';
+import Capitulo3 from './capitulo3';
 
 //-----------------------------------------------------------------------------------------------------
 
@@ -8,176 +9,10 @@ import Capitulo2 from './capitulo2';
 //-----------------------------------------------------------------------------------------------------
 
 
-const capitulo3_exercicio1= (array: number[] = []): void => {
-  console.log('capitulo 3.1 Fácil: Crie um array de números e imprima seus elementos')
-  console.log(array)
-}
 
-const capitulo3_exercicio2= (array: number[] = []): void => {
-  console.log('capitulo 3.2 Fácil: Implemente uma função que some todos os elementos de um array numérico')
-  let soma: number = 0
-  array.forEach((valor: number)  => {
-      soma = soma + valor
-
-  })
-  console.log(soma)
-}
-
-const capitulo3_exercicio3= (array: number[] = []): void => {
-  console.log('capitulo 3.3 Fácil: Escreva uma função que encontre o maior número em um array')
-  let maior: number = 0
-  array.forEach((valor: number) => {
-      if(valor > maior){
-          maior = valor
-      }
-  })
-  console.log(maior)
-}
-
-const capitulo3_exercicio4 = (array: number[]): void => {
-  console.log('capitulo 3.4 Fácil: Crie um novo array removendo os elementos duplicados de outro array')
-  console.log(new Set(array))
-}  
-
-const capitulo3_exercicio5 = (array: number[]): void => {
-  console.log('capitulo 3.5 Moderado: Desenvolva uma função que ordene um array de números')
-  console.log(array.sort())
-}
-
-const capitulo3_exercicio6 = (array: number[]): void => {
-  console.log('capitulo 3.6 Moderado: Crie uma função que filtre os números pares de um array.')
-  console.log(array.filter((valor: number) => valor % 2 === 0))
-}
-
-const capitulo3_exercicio7 = (array: number[], array2: number[]): void => {
-  console.log('capitulo 3.7 Moderado: Implemente uma função que concatene dois arrays')
-  console.log(array.concat(array2))
-}
-
-const capitulo3_exercicio8 = (array: number[]): number[] => {
-  console.log('capitulo 3.8 Difícil: Escreva uma função que encontre a sublista contígua de maior soma em um array'); 
-  let maximoAgora = array[0]
-  let maximo = array[0]
-  let comeco = 0
-  let final = 0
-
-  for (let i = 1; i < array.length; i++) {
-      maximoAgora = Math.max(array[i], maximoAgora + array[i])
-      if (maximoAgora === array[i]) {
-              comeco = i
-      }
-
-      if (maximoAgora > maximo) {
-              maximo = maximoAgora
-              final = i
-      }
-    }
-return array.slice(comeco, final + 1)
-}
 //-----------------------------------------------------------------------------------------------------
 
 
-const capitulo4_exercicio1 = (a: number, b: number): void => {
-  console.log('capitulo 4.1 Fácil: Crie uma função que receba dois números e retorne a soma deles')
-  let resposta = a+b
-  console.log(resposta)
-}
-
-const capitulo4_exercicio2 = (numero: number): void => {
-  if(numero > 0){
-      console.log('positivo')
-  }if(numero < 0){
-      console.log('negativo')
-  }if(numero === 0){
-      console.log('0')
-  }
-}
-
-const capitulo4_exercicio3 = (numero: number): void => {
-  console.log('capitulo  4.3 Fácil: Escreva uma função que calcule o fatorial de um número')
-  let i: number = numero - 1
-  let fatorial: number = numero
-  while(i > 1){
-      fatorial = fatorial * i
-      i-- 
-  }
-  console.log(fatorial)
-}
-
-const capitulo4_exercicio4 = (numero: number[] = []): void => {
-  console.log('capitulo 4.4 Fácil: Crie uma função que receba um array de números e retorne a média')
-  let media: number
-  let soma: number = 0
-  numero.forEach((valor: number) => {
-      soma = soma + valor
-
-  })
-  media = soma/numero.length
-  
-  console.log(media)
-
-
-}  
-
-const capitulo4_exercicio5 = (palavra: string): void => {
-    console.log('capitulo 4.5 Moderado: Desenvolva uma função que receba uma string e retorne a quantidade de vogais')
-    let vogais: number = 0
-    palavra.split('').forEach((valor: string) => {
-        if(valor === 'a' ||valor === 'e' ||valor === 'i' ||valor === 'o' ||valor === 'u' ||valor === 'A' ||valor === 'E' ||valor === 'I' ||valor === 'O' ||valor === 'U')
-        vogais = vogais + 1
-    })
-    console.log(vogais)
-}   
-
-const capitulo4_exercicio6 = (palavra: string): void => {
-  console.log('capitulo 4.6 Moderado: Implemente uma função que verifique se uma palavra é um palíndromo.')
-  if(palavra.replace(/\s/g, '').split('').reverse().join('') === palavra.replace(/\s/g, '')){
-      console.log('palíndromo')
-  }else console.log('não é palíndromo')
-
-}
-
-const capitulo4_exercicio7 = (array: string[] = []): void => {
-  console.log('capitulo 4.7 Moderado: Crie uma função que receba um array de strings e retorne o maior comprimento')
-  let maior: number = 0
-  array.forEach((valor: string) => {
-      if(valor.length > maior){
-          maior = valor.length
-      }
-  })
-  console.log(maior)
-}   
-
-type Resultado = {
-  valor: number,
-  index: number
-}
-const capitulo4_exercicio8 = (alvo: number, array: number[]): Resultado => {
-  console.log('capitulo 4.8 Difícil: Escreva uma função que realize a busca binária em um array ordenado.')
-
-  let inicio: number = 0
-  let fim: number = array.length - 1
-
-
-  while(inicio <= fim){
-    const meio: number = Math.floor((inicio + fim)/2)
-
-    if(array[meio] === alvo){
-      return {
-        valor: array[meio],
-        index: meio
-      }
-    }else if(array[meio] < alvo){
-      inicio = meio + 1
-    }else{
-      fim = meio - 1
-    }
-  }
-  return {
-    valor: -1,
-    index: -1
-  }
-}
 
 //-----------------------------------------------------------------------------------------------------
 
@@ -1650,16 +1485,16 @@ const main = (): void => {
 
 
 
-  
-  // capitulo3_exercicio1([1, 2, 3])
-  // capitulo3_exercicio2([1, 2, 3])
-  // capitulo3_exercicio3([1, 1034, 3, 4, 5, 85])
-  // capitulo3_exercicio4([1, 3, 4, 2, 7, 2, 4])
-  // capitulo3_exercicio5([1, 3, 4, 2, 7])
-  // capitulo3_exercicio6([1, 3, 4, 2, 7])
-  // capitulo3_exercicio7([1, 3, 4, 2, 7], [8, 12, 18, 24,])
-  // let maiorSub = capitulo3_exercicio8([-2, 1, -3, 4, -1, 2, 1, -5, 4]);
-  // console.log(maiorSub)
+  const capitulo3: Capitulo3 = new Capitulo3()
+  capitulo3.exercicio1([1, 2, 3])
+  capitulo3.exercicio2([1, 2, 3])
+  capitulo3.exercicio3([1, 1034, 3, 4, 5, 85])
+  capitulo3.exercicio4([1, 3, 4, 2, 7, 2, 4])
+  capitulo3.exercicio5([1, 3, 4, 2, 7])
+  capitulo3.exercicio6([1, 3, 4, 2, 7])
+  capitulo3.exercicio7([1, 3, 4, 2, 7], [8, 12, 18, 24,])
+  const maiorSub = capitulo3.exercicio8([-2, 1, -3, 4, -1, 2, 1, -5, 4]);
+  console.log(maiorSub)
 
 
 
