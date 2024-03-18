@@ -7,6 +7,7 @@ import Capitulo6 from './capitulo6/index';
 import Capitulo7, { Curso, Livro } from './capitulo7/index';
 import Capitulo8, { Evento, ProdutoEx3, TProdutoCapitulo8Ex4, transacao_banc } from './capitulo8/index';
 import Capitulo9 from './capitulo9/index';
+import Capitulo10 from './capitulo10/index';
 
 
 //-----------------------------------------------------------------------------------------------------
@@ -28,183 +29,6 @@ import Capitulo9 from './capitulo9/index';
 //-----------------------------------------------------------------------------------------------------
 
 
-
-const capitulo10_exercicio1 = (numero: number): boolean => {
-  console.log('capitulo 10.1 Fácil: Crie uma função que verifique se um número é positivo.')
-  if (numero > 0) {
-    return (true)
-  } else {
-    return (false)
-  }
-}
-
-const capitulo10_exercicio2 = (paroun: number): boolean => {
-  console.log('capitulo 10.2 Fácil: Implemente uma função que determine se um número é par.')
-  if (paroun % 2 === 0) {
-    console.log(paroun)
-    return (true)
-  } else {
-    console.log(paroun)
-    return (false)
-  }
-
-}
-const capitulo10_exercicio3 = (vazia: string): boolean => {
-  console.log('capitulo 10.3 Fácil: Escreva uma função que verifique se uma string é vazia.')
-  if (vazia === '' || vazia.length === 0) {
-    return (true)
-  } else {
-    return (false)
-  }
-
-}
-
-const capitulo10_exercicio4 = (str1: string, str2: string): boolean => {
-  console.log('capitulo 10.4 Fácil: Desenvolva uma função que compare duas strings e retorne se são iguais.')
-  if (str1 === str2) return true
-  return false
-
-}
-
-const capitulo10_exercicio5 = (numero: number): void => {
-  console.log('capitulo 10.5 Fácil: Crie uma função que determine se um número é positivo, negativo ou zero.')
-  if (numero > 0) {
-    console.log('positivo')
-  } else if (numero < 0) console.log('negativo')
-  else console.log('igual a 0')
-
-}
-
-const capitulo10_exercicio6 = (ano: number): boolean => {
-  console.log('capitulo 10.6 Moderado: Implemente uma função que verifique se um ano é bissexto')
-  if(ano % 4 === 0 || ano % 400 === 0){
-    console.log(ano)
-    return true
-  }
-  return false
-}
-const capitulo10_exercicio7 = (idade: number): void => {
-  console.log('capitulo10.7 Moderado: Escreva uma função que aceite uma idade e retorne "Criacça", "Adolescente", "Adulto" ou "idoso"')
-  if(idade < 12 && idade > 0){
-    console.log('Criança')
-    console.log(idade)
-}if(idade >= 12 && idade < 18){
-    console.log('Adolescente')
-        console.log(idade)
-
-}if(idade> 17 && idade < 60){
-  console.log('Adulto')
-      console.log(idade)
-
-}if(idade >59){
-  console.log('Idoso')
-      console.log(idade)
-
-}if(idade <0){
-  console.log('alien')
-      console.log(idade)
-
-}
-
-}
-const capitulo10_exercicio8 = (numero: number): void => {
-  console.log('capitulo 10.8 Moderado: Crie uma função que aceite um número e retorne "Fizz" se for divisível por 3, "Buzz" se for divisível por 5 e "FizzBuzz" se for divisível por ambos')
-  if(numero % 3 === 0 && numero % 5 !== 0){
-    console.log('Fizz')
-  }if(numero % 5 === 0 && numero % 3 !== 0){
-    console.log('Buzz')
-  }if(numero % 5 === 0 && numero % 3 === 0){
-    console.log('FizzBuzz')
-  } 
-}
-
-const capitulo10_exercicio9 = (palavra1: string, palavra2: string): void => {
-  console.log('capitulo 10.9 Moderado: Desenvolva uma função que determine se uma palavra é um anagrama de outra')
-  palavra1 = palavra1.split('').sort().join('')
-  palavra2 = palavra2.split('').sort().join('')
-  if(palavra1===palavra2){
-    console.log('São anagramas!')
-  }else console.log('Não são anagramas')
-}
-
-const capitulo10_exercicio10 = (idade: number): void => {
-  console.log('capitulo 10.10 Moderado: Implemente uma função que verifique se uma pessoa pode votar com base na idade')
-    if(idade > 15){
-    console.log('pode votar')
-  }if(idade <16){
-    console.log('não pode votar')
-  }
-}  
-
-const capitulo10_exercicio11 = (numero: number): boolean => {
-  console.log('capitulo 10.11 Difícil: Escreva uma função que determine se um número é primo')
-  if(numero < 2){
-    console.log(numero)
-    return false
-  }if(numero === 2 || numero === 3 || numero === 5 || numero ===7){
-    console.log(numero)
-    return true
-  }if(numero % 2 ===0){
-    return false
-  }if(numero % 3 ===0){
-    return false
-  }if(numero % 5 === 0){
-    return false
-  }if(numero % 7 === 0){
-    return false
-  }
-  return true
-}
-
-const capitulo10_exercicio12 = (senha: string): void => {
-  console.log('capitulo 10.12 Difícil: Desenvolva uma função que valide se uma senha atende a critérios de segurança (mínimo de caracteres, presença de letras e números)')
-  let temLetra = false
-  let temNumero = false
-  let temEspecial = false
-
-
- if (senha.length >= 8){
-  senha.split('').forEach((caracter: string) => {
-    if (!isNaN(parseInt(caracter))) { 
-    temNumero = true
-
-    }else if(/[^a-zA-Z0-9]/.test(caracter)) {
-        
-        temEspecial = true;
-      } else {
-        temLetra = true;
-      }
-  })
- }
-
-  if(senha.length < 8){
-    console.log('precisa de pelo menos 8 caracteres')
-  }if(temLetra && temNumero && temEspecial){
-    console.log('senha aceita')
-  }else console.log('precisa ter numeros, letras e caracteres especiais')
-}
-
-const capitulo10_exercicio13 = (palavra: string): void => {
-  console.log('capitulo 1.8 Difícil: Desenvolva uma função que determine se uma palavra é um palíndromo e imprima o resultado')
- 
- if(palavra.split('').reverse().join('') === palavra){
-  console.log(palavra, 'é um palíndromo')
-
- }else console.log(palavra, 'não é um palíndromo')
-}
-
-const capitulo10_exercicio14 = (lado1: number, lado2: number, lado3: number): void => {
-  console.log('capitulo10.14 Difícil: Implemente uma função que classifique um triângulo com base em seus lados (equilátero,isósceles ou escaleno)')
-
-  if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 >lado3){
-      if(lado1 === lado2 && lado2 === lado3){
-        console.log('O triângulo é equilátero')
-      }if(lado1 === lado2 && lado1 !== lado3 || lado2 === lado3 && lado3 !== lado1){
-        console.log('O triângulo é isósceles')
-      }if(lado1 !== lado2 && lado2 !== lado3)
-        console.log('O triângulo é escaleno')
-  }else console.log('O triângulo não existe')
-}
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1047,23 +871,23 @@ const capitulo7: Capitulo7 = new Capitulo7()
   
 
 
-
-  // console.log(capitulo10_exercicio1(1))
-  // console.log(capitulo10_exercicio2(3))
-  // console.log(capitulo10_exercicio3(''))
-  // console.log(capitulo10_exercicio4('asd', 'asad'))
-  // capitulo10_exercicio5(-1)
-  // capitulo10_exercicio5(0)
-  // capitulo10_exercicio5(1)
-  // console.log(capitulo10_exercicio6(400))
-  // capitulo10_exercicio7(12)
-  // capitulo10_exercicio8(15)
-  //  capitulo10_exercicio9('listen', 'silent')
-  // capitulo10_exercicio10(16)
-  // console.log(capitulo10_exercicio11(2))
-  // capitulo10_exercicio12('Leyra123@')
-  // capitulo10_exercicio13('asa')
-  // capitulo10_exercicio14(5, 6, 7)
+  const capitulo10: Capitulo10 = new Capitulo10()
+  console.log(capitulo10.exercicio1(12))
+  console.log(capitulo10.exercicio2(3))
+  console.log(capitulo10.exercicio3(''))
+  console.log(capitulo10.exercicio4('asd', 'asad'))
+  capitulo10.exercicio5(-1)
+  capitulo10.exercicio5(0)
+  capitulo10.exercicio5(1)
+  console.log(capitulo10.exercicio6(400))
+  capitulo10.exercicio7(12)
+  capitulo10.exercicio8(15)
+   capitulo10.exercicio9('listen', 'silent')
+  capitulo10.exercicio10(16)
+  console.log(capitulo10.exercicio11(2))
+  capitulo10.exercicio12('Leyra123@')
+  capitulo10.exercicio13('asa')
+  capitulo10.exercicio14(5, 6, 7)
 
 
 
