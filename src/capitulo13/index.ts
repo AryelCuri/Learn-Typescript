@@ -81,7 +81,7 @@ export class Cliente1 implements Usuario {
   }
   
 
-   capitulo13_exercicio5(valor: number): void {
+   exercicio5(valor: number): void {
     console.log('capitulo 13.5 Fácil: Parâmetros Opcionais.Adicione um parâmetro opcional à interface Usuario chamado telefone. Atualize a classe Clientepara incluir ou não esse parâmetro.')
     if (valor <= this.saldo) {
       console.log(`${this.nome} fez uma compra de R$${valor.toFixed(2)}`)
